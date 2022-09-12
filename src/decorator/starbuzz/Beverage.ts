@@ -1,7 +1,14 @@
+type Size = "TALL" | "GRANDE" | "VENTI";
+export type SizeCosts = {
+  TALL: number;
+  GRANDE: number;
+  VENTI: number;
+}
 export default abstract class Beverage {
-  // constructor(parameters) {
-
-  // }
+  public size: Size;
+  constructor() {
+    this.size = "TALL";
+  }
   description = "Unknown Beverage";
   /**
    * getDescription
@@ -10,8 +17,15 @@ export default abstract class Beverage {
     return this.description;
   }
 
+  public setSize(size: Size): void {
+    this.size = size;
+  }
+
+  public getSize(): Size {
+    return this.size
+  }
   /**
    * returns the cost of the beverage
    */
-  public abstract cost(): number
+  public abstract cost(): number;
 }
