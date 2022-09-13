@@ -5,7 +5,6 @@ export default class HouseBlend extends Beverage {
   constructor() {
     super();
     this.description = "House Blend Coffee";
-    this.size = 'TALL'
     this.prices = {
       TALL: 0.89,
       GRANDE: 0.99,
@@ -14,6 +13,8 @@ export default class HouseBlend extends Beverage {
   }
 
   public cost(): number {
+    console.log(this.getSize());
+    
     return this.prices[this.getSize()];
   }
 }
