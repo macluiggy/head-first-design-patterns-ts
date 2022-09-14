@@ -22,8 +22,8 @@ export default class StarbuzzCoffee {
     // beverage3.setSize("GRANDE");
     console.log(beverage3.getDescription() + " $" + beverage3.cost());
     beverage3 = new Soy(beverage3);
-    // beverage3 = new Mocha(beverage3);
-    // beverage3 = new Whip(beverage3);
+    beverage3 = new Mocha(beverage3);
+    beverage3 = new Whip(beverage3);
     console.log(beverage3.getDescription() + " $" + beverage3.cost());
   }
 }
