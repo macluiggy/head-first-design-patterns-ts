@@ -4,9 +4,11 @@ export type Types = {
   // pepperoni: PepperoniPizza;
   // clam: ClamPizza;
   // veggie: VeggiePizza;
-}
+};
 
 export default class Pizza {
-  
-  
+  public prepare(): void {}
+  public bake(): void {}
+  public cut(): void {}
+  public box(): void {}
 }

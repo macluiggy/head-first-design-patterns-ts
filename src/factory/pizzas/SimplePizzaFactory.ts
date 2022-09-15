@@ -4,7 +4,7 @@ import CheesePizza from "./CheesePizza";
 import type { Types } from "./Pizza";
 
 export default class SimplePizzaFactory {
-  private types: Types;
+  types: Types;
   constructor(parameters) {
     this.types = {
       cheese: new CheesePizza(),
