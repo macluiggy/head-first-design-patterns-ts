@@ -17,5 +17,5 @@ export default abstract class PizzaStore {
     return pizza;
   }
 
-  abstract createPizza(type: string): Pizza;
+  protected abstract createPizza(type: string): Pizza;
 }
