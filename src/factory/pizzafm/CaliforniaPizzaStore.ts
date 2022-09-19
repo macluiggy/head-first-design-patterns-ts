@@ -3,7 +3,7 @@ import PizzaStore from "../pizzas/PizzaStore";
 import CaliforniaStyleCheezePizza from "./CaliforniaStyleCheezePizza";
 
 export default class CaliforniaPizzaStore extends PizzaStore {
-  CaliforniaTypes = {
+  CaliforniaTypes = { 
     cheese: new CaliforniaStyleCheezePizza(),
     // veggie: new CaliforniaStyleVeggiePizza(),
     // clam: new CaliforniaStyleClamPizza(),
