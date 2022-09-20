@@ -10,6 +10,18 @@ export default class ChicagoPizzaStore extends PizzaStore {
     // pepperoni: new ChicagoStylePepperoniPizza(),
   }
   createPizza(type: string): Pizza {
-    return this.ChicagoTypes[type] || null;
+    if (type === "cheese") {
+      return new ChicagoStyleCheezePizza();
+    } 
+    // else if (type === "veggie") {
+    //   // return new ChicagoStyleVeggiePizza();
+    // } else if (type === "clam") {
+    //   // return new ChicagoStyleClamPizza();
+    // } else if (type === "pepperoni") {
+    //   // return new ChicagoStylePepperoniPizza();
+    // }
+     else {
+      throw new Error("Unknown type of pizza");
+    }
   }
 }

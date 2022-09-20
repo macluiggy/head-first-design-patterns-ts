@@ -10,6 +10,18 @@ export default class NYPizzaStore extends PizzaStore {
     // pepperoni: new NYStylePepperoniPizza(),
   }
   createPizza(type: string): Pizza {
-    return this.NYTypes[type] || null;
+    if (type === "cheese") {
+      return new NYStyleCheesePizza();
+    }
+    // else if (type === "veggie") {
+    //   // return new NYStyleVeggiePizza();
+    // } else if (type === "clam") {
+    //   // return new NYStyleClamPizza();
+    // } else if (type === "pepperoni") {
+    //   // return new NYStylePepperoniPizza();
+    // }
+     else {
+      throw new Error("Unknown type of pizza");
+    }
   }
 }

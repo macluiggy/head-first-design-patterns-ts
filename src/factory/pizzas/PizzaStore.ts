@@ -2,20 +2,20 @@ import Pizza from "./Pizza";
 import PizzaFactory from "./SimplePizzaFactory";
 
 export default abstract class PizzaStore {
-  factory: PizzaFactory;
-  public constructor(factory: PizzaFactory) {
-    this.factory = factory;
-  }
+  // factory: PizzaFactory;
+  // public constructor(factory: PizzaFactory) {
+  //   this.factory = factory;
+  // }
 
-  public orderPizza(type: string): Pizza {
-    let pizza: Pizza;
+  public orderPizza(type: string): Pizza | null {
+    let pizza : Pizza | null;
     pizza  = this.createPizza(type);
-    pizza.prepare();
-    pizza.bake();
-    pizza.cut();
-    pizza.box();
+    pizza!.prepare();
+    pizza!.bake();
+    pizza!.cut();
+    pizza!.box();
     return pizza;
   }
 
-  protected abstract createPizza(type: string): Pizza;
+  protected abstract createPizza(type: string): Pizza | null;
 }
