@@ -8,11 +8,11 @@ export default class ChicagoPizzaStore extends PizzaStore {
     // veggie: new ChicagoStyleVeggiePizza(),
     // clam: new ChicagoStyleClamPizza(),
     // pepperoni: new ChicagoStylePepperoniPizza(),
-  }
+  };
   createPizza(type: string): Pizza {
     if (type === "cheese") {
       return new ChicagoStyleCheezePizza();
-    } 
+    }
     // else if (type === "veggie") {
     //   // return new ChicagoStyleVeggiePizza();
     // } else if (type === "clam") {
@@ -20,7 +20,7 @@ export default class ChicagoPizzaStore extends PizzaStore {
     // } else if (type === "pepperoni") {
     //   // return new ChicagoStylePepperoniPizza();
     // }
-     else {
+    else {
       throw new Error("Unknown type of pizza");
     }
   }
