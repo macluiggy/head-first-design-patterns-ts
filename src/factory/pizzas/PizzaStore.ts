@@ -8,14 +8,14 @@ export default abstract class PizzaStore {
   // }
 
   public orderPizza(type: string): Pizza | null {
-    let pizza : Pizza | null;
+    let pizza : Pizza
     pizza  = this.createPizza(type);
-    pizza!.prepare();
-    pizza!.bake();
-    pizza!.cut();
-    pizza!.box();
+    pizza.prepare();
+    pizza.bake();
+    pizza.cut();
+    pizza.box();
     return pizza;
   }
 
-  protected abstract createPizza(type: string): Pizza | null;
+  protected abstract createPizza(type: string): Pizza;
 }
