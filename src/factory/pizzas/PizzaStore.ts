@@ -14,6 +14,7 @@ export default abstract class PizzaStore {
     pizza.bake();
     pizza.cut();
     pizza.box();
+    
     return pizza;
   }
 
