@@ -1,20 +1,11 @@
-import Pizza from "./Pizza";
 import PizzaIngredientFactory from "../pizzaaf/PizzaIngredientFactory";
+import Pizza from "./Pizza";
 
-export default class CheezePizza extends Pizza {
-  // name: string;
-  // dough: string;
-  // sauce: string;
-  //  toppings: string[] = [];
+export default class ClamPizza extends Pizza {
   ingredientFactory: PizzaIngredientFactory;
   constructor(ingredientFactory: PizzaIngredientFactory) {
     super();
     this.ingredientFactory = ingredientFactory;
-    this.name = "Cheese Pizza";
-    this.dough = "Regular Crust";
-    this.sauce = "Marinara Pizza Sauce";
-    this.toppings.push("Fresh Mozzarella");
-    this.toppings.push("Parmesan");
   }
 
   prepare(): void {
@@ -22,5 +13,6 @@ export default class CheezePizza extends Pizza {
     this.dough = this.ingredientFactory.createDough();
     this.sauce = this.ingredientFactory.createSauce();
     this.cheese = this.ingredientFactory.createCheese();
+    this.clam = this.ingredientFactory.createClam();
   }
 }
