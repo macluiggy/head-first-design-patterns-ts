@@ -23,12 +23,15 @@ export default abstract class Pizza {
   pepperoni: Pepperoni;
   clam: Clams;
 
-  // constructor() {
-  //   this.name = "";
-  //   this.dough = "";
-  //   this.sauce = "";
-  //   this.toppings = [];
-  // }
+  constructor() {
+    this.name = "";
+    this.dough = "";
+    this.sauce = "";
+    this.cheese = "";
+    this.pepperoni = "";
+    this.clam = "";
+    this.toppings = [];
+  }
 
   // public prepare(): void {
   //   console.log(`Preparing ${this.name}`);
@@ -53,6 +56,9 @@ export default abstract class Pizza {
 
   public getName(): string {
     return this.name;
+  }
+  public setName(name: string): void {
+    this.name = name;
   }
   public toString(): string {
     // code to display pizza name and ingredients

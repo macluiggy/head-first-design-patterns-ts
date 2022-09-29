@@ -8,11 +8,11 @@ export default class PizzaTestDrive {
     let nyStore: PizzaStore = new NYPizzaStore();
     let chicagoStore: PizzaStore = new ChicagoPizzaStore();
 
-    let pizza: Pizza | null = nyStore.orderPizza("cheese");
-    console.log("Ethan ordered a " + pizza!.getName() + "\n");
+    let pizza: Pizza  = nyStore.orderPizza("cheese");
+    console.log("Ethan ordered a " + pizza.getName() + "\n");
 
     pizza = chicagoStore.orderPizza("cheese");
-    console.log("Joel ordered a " + pizza!.getName() + "\n");
+    console.log("Joel ordered a " + pizza.getName() + "\n");
   }
 }
 

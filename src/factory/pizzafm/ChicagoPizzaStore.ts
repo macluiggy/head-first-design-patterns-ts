@@ -1,17 +1,20 @@
 import Pizza from "../pizzas/Pizza";
 import PizzaStore from "../pizzas/PizzaStore";
 import ChicagoStyleCheezePizza from "./ChicagoStyleCheesePizza";
+import ChicagoPizzaIngredientFactory from "../pizzaaf/ChicagoPizzaIngredientFactory";
+import CheezePizza from "../pizzas/CheesePizza";
 
 export default class ChicagoPizzaStore extends PizzaStore {
-  ChicagoTypes = {
-    cheese: new ChicagoStyleCheezePizza(),
-    // veggie: new ChicagoStyleVeggiePizza(),
-    // clam: new ChicagoStyleClamPizza(),
-    // pepperoni: new ChicagoStylePepperoniPizza(),
-  };
+  pizza: Pizza
+  ingredientFactory = new ChicagoPizzaIngredientFactory();
+  constructor() {
+    super();
+    this.pizza = 0 as unknown as Pizza;
+  }
   createPizza(type: string): Pizza {
     if (type === "cheese") {
-      return new ChicagoStyleCheezePizza();
+      this.pizza = new CheezePizza(this.ingredientFactory);
+      this.pizza.setName("Chicago Style Deep Dish Cheese Pizza");
     }
     // else if (type === "veggie") {
     //   // return new ChicagoStyleVeggiePizza();
@@ -20,8 +23,9 @@ export default class ChicagoPizzaStore extends PizzaStore {
     // } else if (type === "pepperoni") {
     //   // return new ChicagoStylePepperoniPizza();
     // }
-    else {
-      throw new Error("Unknown type of pizza");
-    }
+    // else {
+    //   throw new Error("Unknown type of pizza");
+    // }
+    return this.pizza;
   }
 }

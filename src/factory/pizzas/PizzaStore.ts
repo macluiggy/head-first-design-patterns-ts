@@ -7,7 +7,7 @@ export default abstract class PizzaStore {
   //   this.factory = factory;
   // }
 
-  public orderPizza(type: string): Pizza | null {
+  public orderPizza(type: string): Pizza  {
     let pizza : Pizza
     pizza  = this.createPizza(type);
     pizza.prepare();
