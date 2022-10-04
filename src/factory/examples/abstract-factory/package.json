@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ts-node factory-class-test.ts",
-    "prod": "NODE_ENV=production ts-node factory-class-test.ts"},
+    "dev2": "NODE_ENV=development ts-node factory-functions-test.ts",
+    "prod": "NODE_ENV=production ts-node factory-class-test.ts",
+    "prod2": "NODE_ENV=production ts-node factory-functions-test.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
