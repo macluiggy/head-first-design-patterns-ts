@@ -7,7 +7,10 @@ interface IFileReader {
 }
 
 class DirectoryScraper {
-  constructor(public dirPath: string, public fileReader: IFileReader) {}
+  constructor(public dirPath: string, public fileReader: IFileReader) {
+    this.dirPath = dirPath;
+    this.fileReader = fileReader;
+  }
 
   scanFiles() {
     return fs
