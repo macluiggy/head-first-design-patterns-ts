@@ -1,0 +1,16 @@
+{
+  "name": "abstract-factory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development ts-node factory-class-test.ts",
+    "prod": "NODE_ENV=production ts-node factory-class-test.ts"},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.8.1"
+  }
+}
