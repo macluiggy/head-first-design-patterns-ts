@@ -1,3 +1,4 @@
+import ItemsFactory from "../cars-abstract-factory/ItemsFactory";
 import Stickers from "../cars-factory-method/Stickers";
 import TeslaCarsFactory from "../cars-factory-method/TeslaCarsFactory";
 import Turbo from "../cars-factory-method/Turbo";
@@ -21,6 +22,9 @@ export default class Main {
     // console.log(car.getDescription() + " and it costs $" + car.getCost());
     car = new Turbo(car);
     // console.log(`Car name: ${car.getName()}`);
+    console.log(car.getDescription() + " and it costs $" + car.getCost());
+
+    car  = new ItemsFactory(car)
     console.log(car.getDescription() + " and it costs $" + car.getCost());
     
   }
