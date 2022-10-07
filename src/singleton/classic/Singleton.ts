@@ -23,4 +23,7 @@ export default class Singleton {
 let singleton = Singleton.getInstance();
 // console.log(singleton)
 console.log(singleton.getDescription());
+ enum SingletonEnum {
+  UNIQUE_INSTANCE
+} 
 
