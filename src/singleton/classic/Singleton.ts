@@ -1,7 +1,11 @@
+import { log } from "console";
+
 export default class Singleton {
   private static uniqueInstance: Singleton;
-
-  private constructor() {}
+  counter: number;
+  private constructor() {
+    this.counter = 0;
+  }
 
   public static getInstance(): Singleton {
     if (!this.uniqueInstance) {
@@ -12,7 +16,11 @@ export default class Singleton {
   getDescription(): string {
     return "Singleton";
   }
+  addOne(): void {
+    this.counter++;
+  }
 }
-
 let singleton = Singleton.getInstance();
+// console.log(singleton)
 console.log(singleton.getDescription());
+
