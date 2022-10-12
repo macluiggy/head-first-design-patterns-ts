@@ -13,13 +13,6 @@ export default class Main {
     console.log(car.getDescription() + " and it costs $" + car.getCost());
 
     car = new Stickers(car);
-    // console.log(`Car name: ${car.getName()}`);
-    // console.log(car2.getDescription() + " and it costs $" + car2.getCost());
-    // car.addDecoration();
-    // car = new Stickers(car);
-    // car.addDecoration();
-    // console.log(`Car name: ${car.getName()}`);
-    // console.log(car.getDescription() + " and it costs $" + car.getCost());
     car = new Turbo(car);
     // console.log(`Car name: ${car.getName()}`);
     console.log(car.getDescription() + " and it costs $" + car.getCost());
