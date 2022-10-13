@@ -7,9 +7,11 @@ export default class Subscribers implements Observer {
   private hasDiscount: boolean;
   private discount: number;
   private godOfWar: GodOfWar;
+  name: string;
 
-  constructor(godOfWar: GodOfWar) {
+  constructor(godOfWar: GodOfWar, name: string) {
     this.godOfWar = godOfWar;
+    this.name = name;
     this.price = 60;
     this.hasDiscount = false;
     this.discount = 0;
@@ -26,7 +28,7 @@ export default class Subscribers implements Observer {
   display(): void {
     if (this.hasDiscount) {
       console.log(
-        `Your game on your wishlist has a discount! The price is ${this.price}`
+        `${this.name} your game on your wishlist has a discount! The price is ${this.price}`
       );
     }
   }
