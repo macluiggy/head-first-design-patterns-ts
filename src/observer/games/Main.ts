@@ -52,7 +52,7 @@ let games = [
     name: "Fall Guys",
     price: 20,
     hasDiscount: true,
-    discount: 0.9999999999999999999999999999,
+    discount: 1,
   },
 ];
 export default class Main {
