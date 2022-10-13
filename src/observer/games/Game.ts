@@ -1,16 +1,18 @@
 import Observer from "./Oberver";
 import Subject from "./Subject";
 
-export default class GodOfWar implements Subject {
+export default class Game implements Subject {
   private observers: Observer[] = [];
   private price: number;
   private hasDiscount: boolean;
   private discount: number = 0;
+  private name: string;
 
-  constructor() {
-    this.price = 60;
+  constructor(price: number, discount: number, name: string) {
+    this.price = price;
     this.hasDiscount = false;
-    this.discount = 0.5;
+    this.discount = discount;
+    this.name = name;
   }
   public registerObserver(o: Observer): void {
     this.observers.push(o);
@@ -29,6 +31,7 @@ export default class GodOfWar implements Subject {
   applyDiscount(discount: number): void {
     this.hasDiscount = true;
     this.discount = discount;
+    this.price = discount == 1 ? 0 : this.price;
     this.updatePrice(this.price);
   }
   disableDiscount(): void {
@@ -38,7 +41,7 @@ export default class GodOfWar implements Subject {
 
   public notifyObservers(): void {
     for (const observer of this.observers) {
-      observer.update(this.hasDiscount, this.price);
+      observer.update(this.hasDiscount, this.price, this.name);
     }
   }
 }

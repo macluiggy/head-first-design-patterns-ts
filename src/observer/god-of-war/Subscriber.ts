@@ -1,4 +1,4 @@
-import GodOfWar from "./GodOfWar";
+import Game from "./Game";
 import Observer from "./Oberver";
 
 export default class Subscribers implements Observer {
@@ -6,10 +6,12 @@ export default class Subscribers implements Observer {
   private price: number;
   private hasDiscount: boolean;
   private discount: number;
-  private godOfWar: GodOfWar;
+  private godOfWar: Game;
+  name: string;
 
-  constructor(godOfWar: GodOfWar) {
+  constructor(godOfWar: Game, name: string) {
     this.godOfWar = godOfWar;
+    this.name = name;
     this.price = 60;
     this.hasDiscount = false;
     this.discount = 0;
@@ -26,7 +28,7 @@ export default class Subscribers implements Observer {
   display(): void {
     if (this.hasDiscount) {
       console.log(
-        `Your game on your wishlist has a discount! The price is ${this.price}`
+        `${this.name} your game on your wishlist has a discount! The price is ${this.price}`
       );
     }
   }

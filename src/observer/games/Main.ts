@@ -3,11 +3,11 @@ import Subscriber from "./Subscriber";
 let gamers = [
   {
     name: "John",
-    id_game_wishlist: [1, 2],
+    id_game_wishlist: [1, 2, 3, 4, 5],
   },
   {
     name: "Mary",
-    id_game_wishlist: [1],
+    id_game_wishlist: [1, 5],
   },
   {
     name: "Peter",
@@ -17,33 +17,44 @@ let gamers = [
     name: "Jane",
     id_game_wishlist: [1, 2, 3],
   },
-]
+];
 let games = [
   {
     id_game: 1,
     name: "God of War",
     price: 60,
     hasDiscount: true,
+    discount: 0.1,
   },
   {
     id_game: 2,
     name: "The Last of Us",
     price: 50,
     hasDiscount: false,
+    discount: 0.9,
   },
   {
     id_game: 3,
     name: "Uncharted 4",
     price: 40,
     hasDiscount: true,
+    discount: 0.2,
   },
   {
     id_game: 4,
     name: "Horizon Zero Dawn",
     price: 30,
     hasDiscount: false,
+    discount: 0.8,
   },
-]
+  {
+    id_game: 5,
+    name: "Fall Guys",
+    price: 20,
+    hasDiscount: true,
+    discount: 0.9999999999999999999999999999,
+  },
+];
 export default class Main {
   public static main(): void {
     for (let i = 0; i < games.length; i++) {
@@ -52,7 +63,7 @@ export default class Main {
         if (gamer.id_game_wishlist.includes(game.id_game)) {
           let gameSubject = new Game(game.price, 0.1, game.name);
           new Subscriber(gameSubject, gamer.name);
-          gameSubject.applyDiscount(0.1);
+          gameSubject.applyDiscount(game.discount);
         }
       }
     }
