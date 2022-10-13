@@ -1,5 +1,5 @@
 import Game from "./Game";
-import Subscriber from "./Subscriber";
+import Gamer from "./Gamer";
 let gamers = [
   {
     name: "John",
@@ -62,7 +62,7 @@ export default class Main {
       for (const gamer of gamers) {
         if (gamer.id_game_wishlist.includes(game.id_game)) {
           let gameSubject = new Game(game.price, 0.1, game.name);
-          new Subscriber(gameSubject, gamer.name);
+          new Gamer(gameSubject, gamer.name);
           gameSubject.applyDiscount(game.discount);
         }
       }

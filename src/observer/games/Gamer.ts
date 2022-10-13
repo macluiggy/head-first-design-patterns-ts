@@ -1,7 +1,7 @@
 import Game from "./Game";
 import Observer from "./Oberver";
 
-export default class Subscriber implements Observer {
+export default class Gamer implements Observer {
   private observers: Observer[] = [];
   private price: number;
   private hasDiscount: boolean;
