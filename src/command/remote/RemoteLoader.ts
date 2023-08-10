@@ -8,6 +8,9 @@ import Light from "./Light";
 import LightOffCommand from "./LightOffCommand";
 import LightOnCommand from "./LightOnCommand";
 import RemoteControl from "./RemoteControl";
+import Stereo from "./Stereo";
+import StereoOffCommand from "./StereoOffCommand";
+import StereoOnWithCDCommand from "./StereoOnWithCDCommand";
 
 export default class RemoteLoader {
   public static main(args: string[]): void {
@@ -17,6 +20,7 @@ export default class RemoteLoader {
     const kitchenLight: Light = new Light("Kitchen");
     const ceilingFan: CeilingFan = new CeilingFan("Living Room");
     const garageDoor: GarageDoor = new GarageDoor("Garage");
+    const stereo: Stereo = new Stereo("Living Room");
 
     const livingRoomLightOn: LightOnCommand = new LightOnCommand(
       livingRoomLight
@@ -38,11 +42,16 @@ export default class RemoteLoader {
     const garageDoorDown: GarageDoorDownCommand = new GarageDoorDownCommand(
       garageDoor
     );
+    const stereoOnWithCD: StereoOnWithCDCommand = new StereoOnWithCDCommand(
+      stereo
+    );
+    const stereoOffWithCD: StereoOffCommand = new StereoOffCommand(stereo);
 
     remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
     remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
     remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
     remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
+    remoteControl.setCommand(4, stereoOnWithCD, stereoOffWithCD);
 
     console.log(remoteControl.toString());
 
@@ -54,6 +63,8 @@ export default class RemoteLoader {
     remoteControl.offButtonWasPushed(2);
     remoteControl.onButtonWasPushed(3);
     remoteControl.offButtonWasPushed(3);
+    remoteControl.onButtonWasPushed(4);
+    remoteControl.offButtonWasPushed(4);
   }
 }
 
