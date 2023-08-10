@@ -1,6 +1,9 @@
 import CeilingFan from "./CeilingFan";
-import CeilingFanOffCommand from "./CeilingFanOff";
-import CeilingFanOnCommand from "./CeilingFanOn";
+import CeilingFanOffCommand from "./CeilingFanOffCommand";
+import CeilingFanOnCommand from "./CeilingFanOnCommand";
+import GarageDoor from "./GarageDoor";
+import GarageDoorDownCommand from "./GarageDoorDownCommand";
+import GarageDoorUpCommand from "./GarageDoorUpCommand";
 import Light from "./Light";
 import LightOffCommand from "./LightOffCommand";
 import LightOnCommand from "./LightOnCommand";
@@ -13,6 +16,7 @@ export default class RemoteLoader {
     const livingRoomLight: Light = new Light("Living Room");
     const kitchenLight: Light = new Light("Kitchen");
     const ceilingFan: CeilingFan = new CeilingFan("Living Room");
+    const garageDoor: GarageDoor = new GarageDoor("Garage");
 
     const livingRoomLightOn: LightOnCommand = new LightOnCommand(
       livingRoomLight
@@ -28,10 +32,17 @@ export default class RemoteLoader {
     const ceilingFanOff: CeilingFanOffCommand = new CeilingFanOffCommand(
       ceilingFan
     );
+    const garageDoorUp: GarageDoorUpCommand = new GarageDoorUpCommand(
+      garageDoor
+    );
+    const garageDoorDown: GarageDoorDownCommand = new GarageDoorDownCommand(
+      garageDoor
+    );
 
     remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
     remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
     remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
+    remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
 
     console.log(remoteControl.toString());
 
@@ -41,6 +52,8 @@ export default class RemoteLoader {
     remoteControl.offButtonWasPushed(1);
     remoteControl.onButtonWasPushed(2);
     remoteControl.offButtonWasPushed(2);
+    remoteControl.onButtonWasPushed(3);
+    remoteControl.offButtonWasPushed(3);
   }
 }
 
