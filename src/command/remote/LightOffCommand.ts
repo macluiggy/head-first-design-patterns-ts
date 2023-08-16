@@ -2,13 +2,17 @@ import Command from "./Command";
 import Light from "./Light";
 
 export default class LightOffCommand implements Command {
-    private light: Light;
+  private light: Light;
 
-    constructor(light: Light) {
-        this.light = light;
-    }
+  constructor(light: Light) {
+    this.light = light;
+  }
 
-    execute(): void {
-        this.light.off();
-    }
+  execute(): void {
+    this.light.off();
+  }
+
+  undo(): void {
+    this.light.on();
+  }
 }
