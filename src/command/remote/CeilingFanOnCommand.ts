@@ -9,4 +9,8 @@ export default class CeilingFanOnCommand implements Command {
   execute(): void {
     this.ceilingFan.high();
   }
+
+  undo(): void {
+    this.ceilingFan.off();
+  }
 }

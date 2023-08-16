@@ -8,4 +8,8 @@ export default class StereoOffCommand {
   execute() {
     this.stereo.off();
   }
+
+  undo() {
+    this.stereo.on();
+  }
 }

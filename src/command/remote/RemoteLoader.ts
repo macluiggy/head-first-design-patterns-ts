@@ -11,6 +11,7 @@ import Light from "./Light";
 import LightOffCommand from "./LightOffCommand";
 import LightOnCommand from "./LightOnCommand";
 import RemoteControl from "./RemoteControl";
+import RemoteControlWithUndo from "./RemoteControleWithUndo";
 import Stereo from "./Stereo";
 import StereoOffCommand from "./StereoOffCommand";
 import StereoOnWithCDCommand from "./StereoOnWithCDCommand";
@@ -20,7 +21,7 @@ import TVOnCommand from "./TVOnCommand";
 
 export default class RemoteLoader {
   public static main(args: string[]): void {
-    const remoteControl: RemoteControl = new RemoteControl();
+    const remoteControl: RemoteControlWithUndo = new RemoteControlWithUndo();
 
     const livingRoomLight: Light = new Light("Living Room");
     const kitchenLight: Light = new Light("Kitchen");
@@ -71,18 +72,31 @@ export default class RemoteLoader {
 
     remoteControl.onButtonWasPushed(0);
     remoteControl.offButtonWasPushed(0);
+    remoteControl.undoButtonWasPushed();
+
     remoteControl.onButtonWasPushed(1);
     remoteControl.offButtonWasPushed(1);
+    remoteControl.undoButtonWasPushed();
+
     remoteControl.onButtonWasPushed(2);
     remoteControl.offButtonWasPushed(2);
+    remoteControl.undoButtonWasPushed();
+
     remoteControl.onButtonWasPushed(3);
     remoteControl.offButtonWasPushed(3);
+    remoteControl.undoButtonWasPushed();
+
     remoteControl.onButtonWasPushed(4);
     remoteControl.offButtonWasPushed(4);
+    remoteControl.undoButtonWasPushed();
+
     remoteControl.onButtonWasPushed(5);
     remoteControl.offButtonWasPushed(5);
+    remoteControl.undoButtonWasPushed();
+
     remoteControl.onButtonWasPushed(6);
     remoteControl.offButtonWasPushed(6);
+    remoteControl.undoButtonWasPushed();
   }
 }
 

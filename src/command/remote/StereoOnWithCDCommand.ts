@@ -10,4 +10,8 @@ export default class StereoOnWithCDCommand {
     this.stereo.setCD();
     this.stereo.setVolume(11);
   }
+
+  undo() {
+    this.stereo.off();
+  }
 }

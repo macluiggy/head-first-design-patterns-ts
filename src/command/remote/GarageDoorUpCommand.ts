@@ -9,4 +9,8 @@ export default class GarageDoorUpCommand implements Command {
   execute(): void {
     this.garageDoor.up();
   }
+
+  undo(): void {
+    this.garageDoor.down();
+  }
 }
