@@ -1,0 +1,7 @@
+key concepts to practice for the Command pattern:
+- receiver and invoker
+- command interface
+- concrete command
+- remote control
+- remote loader
+- macro command

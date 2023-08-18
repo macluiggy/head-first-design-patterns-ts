@@ -1,4 +1,5 @@
 import CeilingFan from "./CeilingFan";
+import CeilingFanHighCommand from "./CeilingFanHighCommand";
 import CeilingFanOffCommand from "./CeilingFanOffCommand";
 import CeilingFanOnCommand from "./CeilingFanOnCommand";
 import GarageDoor from "./GarageDoor";
@@ -39,7 +40,7 @@ export default class RemoteLoader {
     );
     const kitchenLightOn: LightOnCommand = new LightOnCommand(kitchenLight);
     const kitchenLightOff: LightOffCommand = new LightOffCommand(kitchenLight);
-    const ceilingFanOn: CeilingFanOnCommand = new CeilingFanOnCommand(
+    const ceilingFanHigh: CeilingFanHighCommand = new CeilingFanHighCommand(
       ceilingFan
     );
     const ceilingFanOff: CeilingFanOffCommand = new CeilingFanOffCommand(
@@ -62,7 +63,7 @@ export default class RemoteLoader {
 
     remoteControl.setCommand(0, livingRoomLightOn, livingRoomLightOff);
     remoteControl.setCommand(1, kitchenLightOn, kitchenLightOff);
-    remoteControl.setCommand(2, ceilingFanOn, ceilingFanOff);
+    remoteControl.setCommand(2, ceilingFanHigh, ceilingFanOff);
     remoteControl.setCommand(3, garageDoorUp, garageDoorDown);
     remoteControl.setCommand(4, stereoOnWithCD, stereoOffWithCD);
     remoteControl.setCommand(5, hottubOn, hottubOff);
