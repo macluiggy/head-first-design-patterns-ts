@@ -9,7 +9,7 @@ export default class DrawingCircleShapeCommand implements Command {
   }
 
   execute(): void {
-    const circle = this.drawingCanvas.drawCircle(this.circle);
+    const circle = this.drawingCanvas.drawShape(this.circle);
     this.drawingCanvas.addShape(circle);
   }
 

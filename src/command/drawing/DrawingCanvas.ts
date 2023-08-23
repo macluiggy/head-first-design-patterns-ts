@@ -3,7 +3,7 @@ import Shape from "./Shape";
 export default class DrawingCanvas {
   private shapes: Shape[] = [];
 
-  drawCircle(shape: Shape) {
+  drawShape(shape: Shape) {
     shape.draw();
     return shape;
   }
@@ -27,6 +27,18 @@ export default class DrawingCanvas {
     );
 
     shape.move(dx, dy);
+  }
+
+  rotateShape(shape: Shape, angle: number) {
+    console.log(`Rotating shape ${shape.constructor.name} by ${angle}`);
+
+    shape.rotate(angle);
+  }
+
+  scaleShape(shape: Shape, factor: number) {
+    console.log(`Scaling shape ${shape.constructor.name} by ${factor}`);
+
+    shape.scale(factor);
   }
 
   getShapes(): Shape[] {

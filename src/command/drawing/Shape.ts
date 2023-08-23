@@ -14,4 +14,12 @@ export default abstract class Shape {
     this.x += dx;
     this.y += dy;
   }
+
+  rotate(angle: number) {
+    console.log(`Rotating shape ${this.constructor.name} by ${angle}`);
+  }
+
+  scale(factor: number) {
+    console.log(`Scaling shape ${this.constructor.name} by ${factor}`);
+  }
 }
