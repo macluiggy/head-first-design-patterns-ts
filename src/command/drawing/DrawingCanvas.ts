@@ -22,11 +22,13 @@ export default class DrawingCanvas {
   }
 
   translateShape(shape: Shape, dx: number, dy: number) {
-    console.log(
-      `Translating shape ${shape.constructor.name} by ${dx} and ${dy}`
-    );
+    // console.log(
+    //   `Translating shape ${shape.constructor.name} by ${dx} and ${dy}`
+    // );
 
     shape.move(dx, dy);
+    console.log(`Now the ${shape.constructor.name} is at (${shape.x}, ${shape.y})`);
+    
   }
 
   rotateShape(shape: Shape, angle: number) {
