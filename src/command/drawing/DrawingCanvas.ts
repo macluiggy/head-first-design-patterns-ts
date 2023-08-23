@@ -14,6 +14,8 @@ export default class DrawingCanvas {
   }
 
   removeShape(shape: Shape) {
+    console.log(`Removing shape ${shape.constructor.name}`);
+
     const index = this.shapes.indexOf(shape);
     if (index !== -1) {
       this.shapes.splice(index, 1);

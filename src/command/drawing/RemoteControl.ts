@@ -8,13 +8,13 @@ export default class RemoteControl {
     const drawingCanvasCircleCommand: DrawingCanvasCircleCommand =
       new DrawingCanvasCircleCommand(drawingCanvas, new Circle(2, 2, 2, "red"));
 
-    console.log(drawingCanvas.getShapes());
+    // console.log(drawingCanvas.getShapes());
 
     drawingCanvasCircleCommand.execute();
     drawingCanvasCircleCommand.undo();
     drawingCanvasCircleCommand.redo();
 
-    console.log(drawingCanvas.getShapes());
+    // console.log(drawingCanvas.getShapes());
   }
 }
 
