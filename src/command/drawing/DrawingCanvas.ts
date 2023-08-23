@@ -1,12 +1,11 @@
-import Circle from "./Circle";
 import Shape from "./Shape";
 
 export default class DrawingCanvas {
   private shapes: Shape[] = [];
 
-  drawCircle(circle: Circle) {
-    circle.draw();
-    return circle;
+  drawCircle(shape: Shape) {
+    shape.draw();
+    return shape;
   }
 
   addShape(shape: Shape) {
@@ -20,6 +19,14 @@ export default class DrawingCanvas {
     if (index !== -1) {
       this.shapes.splice(index, 1);
     }
+  }
+
+  translateShape(shape: Shape, dx: number, dy: number) {
+    console.log(
+      `Translating shape ${shape.constructor.name} by ${dx} and ${dy}`
+    );
+
+    shape.move(dx, dy);
   }
 
   getShapes(): Shape[] {

@@ -2,7 +2,7 @@ import Circle from "./Circle";
 import Command from "./Command";
 import DrawingCanvas from "./DrawingCanvas";
 
-export default class DrawingCanvasCircleCommand implements Command {
+export default class DrawingCircleShapeCommand implements Command {
   constructor(private drawingCanvas: DrawingCanvas, private circle: Circle) {
     this.drawingCanvas = drawingCanvas;
     this.circle = circle;
