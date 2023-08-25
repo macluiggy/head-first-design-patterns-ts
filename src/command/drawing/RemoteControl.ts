@@ -1,17 +1,22 @@
 import Circle from "./Circle";
 import DrawingCanvas from "./DrawingCanvas";
 import DrawingCircleShapeCommand from "./DrawingCircleShapeCommand";
+import RotateCircleShapeCommand from "./RotateCircleShapeCommand";
 import TranslateCircleShapeCommand from "./TranslateCircleShapeCommand";
 
 export default class RemoteControl {
   public static main(): void {
     const drawingCanvas: DrawingCanvas = new DrawingCanvas();
 
-    const circle = new Circle(2, 2, 2, "red")
+    const circle = new Circle(2, 2, 2, "red");
     const drawingCircleShapeCommand: DrawingCircleShapeCommand =
       new DrawingCircleShapeCommand(drawingCanvas, circle);
-      const translateCircleShapeCommand: TranslateCircleShapeCommand =
+
+    const translateCircleShapeCommand: TranslateCircleShapeCommand =
       new TranslateCircleShapeCommand(drawingCanvas, circle, 2, 2);
+
+    const rotateCircleShapeCommand: RotateCircleShapeCommand =
+      new RotateCircleShapeCommand(drawingCanvas, circle, 90);
 
     // console.log(drawingCanvas.getShapes());
 
@@ -22,6 +27,10 @@ export default class RemoteControl {
     translateCircleShapeCommand.execute();
     translateCircleShapeCommand.undo();
     translateCircleShapeCommand.redo();
+
+    rotateCircleShapeCommand.execute();
+    rotateCircleShapeCommand.undo();
+    rotateCircleShapeCommand.redo();
 
     // console.log(drawingCanvas.getShapes());
   }
