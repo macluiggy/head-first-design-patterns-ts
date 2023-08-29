@@ -34,15 +34,19 @@ export default class RemoteLoader {
     // execute commands
     remoteControl.onButtonWasPushed(0);
     remoteControl.undoButtonWasPushed();
+    remoteControl.redoButtonWasPushed();
 
     remoteControl.onButtonWasPushed(1);
     remoteControl.undoButtonWasPushed();
+    remoteControl.redoButtonWasPushed();
 
     remoteControl.onButtonWasPushed(2);
     remoteControl.undoButtonWasPushed();
+    remoteControl.redoButtonWasPushed();
 
     remoteControl.onButtonWasPushed(3);
     remoteControl.undoButtonWasPushed();
+    remoteControl.redoButtonWasPushed();
   }
 }
 

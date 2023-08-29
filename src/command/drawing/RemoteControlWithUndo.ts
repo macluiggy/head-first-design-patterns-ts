@@ -38,7 +38,12 @@ export default class RemoteControlWithUndo {
 
   // undoButtonWasPushed
   undoButtonWasPushed(): void {
-    this.undoCommand.undo!();
+    this.undoCommand.undo();
+  }
+
+  // redoButtonWasPushed
+  redoButtonWasPushed(): void {
+    this.undoCommand.redo();
   }
 
   // toString
