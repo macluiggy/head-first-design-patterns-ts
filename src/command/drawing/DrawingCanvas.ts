@@ -22,9 +22,6 @@ export default class DrawingCanvas {
   }
 
   translateShape(shape: Shape, dx: number, dy: number) {
-    // console.log(
-    //   `Translating shape ${shape.constructor.name} by ${dx} and ${dy}`
-    // );
 
     shape.move(dx, dy);
     console.log(
