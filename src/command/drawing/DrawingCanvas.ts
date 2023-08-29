@@ -27,19 +27,16 @@ export default class DrawingCanvas {
     // );
 
     shape.move(dx, dy);
-    console.log(`Now the ${shape.constructor.name} is at (${shape.x}, ${shape.y})`);
-    
+    console.log(
+      `Now the ${shape.constructor.name} is at (${shape.x}, ${shape.y})`
+    );
   }
 
   rotateShape(shape: Shape, angle: number) {
-    console.log(`Rotating shape ${shape.constructor.name} by ${angle}`);
-
     shape.rotate(angle);
   }
 
   scaleShape(shape: Shape, factor: number) {
-    console.log(`Scaling shape ${shape.constructor.name} by ${factor}`);
-
     shape.scale(factor);
   }
 

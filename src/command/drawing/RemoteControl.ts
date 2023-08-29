@@ -2,6 +2,7 @@ import Circle from "./Circle";
 import DrawingCanvas from "./DrawingCanvas";
 import DrawingCircleShapeCommand from "./DrawingCircleShapeCommand";
 import RotateCircleShapeCommand from "./RotateCircleShapeCommand";
+import ScaleCircleShapeCommand from "./ScaleCircleShapeCommand";
 import TranslateCircleShapeCommand from "./TranslateCircleShapeCommand";
 
 export default class RemoteControl {
@@ -18,6 +19,9 @@ export default class RemoteControl {
     const rotateCircleShapeCommand: RotateCircleShapeCommand =
       new RotateCircleShapeCommand(drawingCanvas, circle, 90);
 
+    const scaleCircleShapeCommand: ScaleCircleShapeCommand =
+      new ScaleCircleShapeCommand(drawingCanvas, circle, 2);
+
     // console.log(drawingCanvas.getShapes());
 
     drawingCircleShapeCommand.execute();
@@ -31,6 +35,10 @@ export default class RemoteControl {
     rotateCircleShapeCommand.execute();
     rotateCircleShapeCommand.undo();
     rotateCircleShapeCommand.redo();
+
+    scaleCircleShapeCommand.execute();
+    scaleCircleShapeCommand.undo();
+    scaleCircleShapeCommand.redo();
 
     // console.log(drawingCanvas.getShapes());
   }
