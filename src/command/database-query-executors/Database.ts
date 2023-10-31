@@ -8,4 +8,10 @@ export default class Database {
   public delete(data: {}): void {
     console.log(`Deleting ${JSON.stringify(data)} from database`);
   }
+  public bulkInsert(data: {}[]): void {
+    console.log(`Bulk inserting ${JSON.stringify(data)} into database`);
+  }
+  public select(data: {}): void {
+    console.log(`Selecting ${JSON.stringify(data)} from database`);
+  }
 }
