@@ -4,7 +4,7 @@ import Tuner from "./Tuner";
 export default class Amplifier {
   description: string;
   tuner: Tuner;
-  player: StreamingPlayer 
+  player: StreamingPlayer;
 
   constructor(description: string) {
     this.description = description;
@@ -23,7 +23,9 @@ export default class Amplifier {
   }
 
   setSurroundSound(): void {
-    console.log(this.description + " surround sound on (5 speakers, 1 subwoofer)");
+    console.log(
+      this.description + " surround sound on (5 speakers, 1 subwoofer)"
+    );
   }
 
   setVolume(level: number): void {
@@ -36,8 +38,13 @@ export default class Amplifier {
   }
 
   setStreamingPlayer(player: StreamingPlayer): void {
-    console.log(this.description + " setting streaming player to " + this.player);
+    console.log(
+      this.description + " setting streaming player to " + this.player
+    );
     this.player = player;
   }
-  
+
+  toString(): string {
+    return this.description;
+  }
 }
