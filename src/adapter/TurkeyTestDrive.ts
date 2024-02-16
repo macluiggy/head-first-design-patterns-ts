@@ -1,8 +1,6 @@
-import Duck from "./Duck";
 import DuckAdapter from "./DuckAdapter";
 import MallardDuck from "./MallardDuck";
 import Turkey from "./Turkey";
-import TurkeyAdapter from "./TurkeyAdapter";
 import WildTurkey from "./WildTurkey";
 
 export default class TurkeyTestDrive {
