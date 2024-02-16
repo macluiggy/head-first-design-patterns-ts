@@ -1,4 +1,6 @@
-export default class MallardDuck {
+import Duck from "./Duck";
+
+export default class MallardDuck implements Duck {
   quack(): void {
     console.log('Quack');
   }
