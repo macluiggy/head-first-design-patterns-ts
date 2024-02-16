@@ -17,16 +17,25 @@ export default class HomeTheaterFacade {
   screen: Screen;
   popper: PopcornPopper;
 
-  constructor(
-    amp: Amplifier,
-    tuner: Tuner,
-    player: StreamingPlayer,
-    cd: CdPlayer,
-    projector: Projector,
-    lights: TheaterLights,
-    screen: Screen,
-    popper: PopcornPopper
-  ) {
+  constructor({
+    amp,
+    tuner,
+    player,
+    cd,
+    projector,
+    lights,
+    screen,
+    popper,
+  }: {
+    amp: Amplifier;
+    tuner: Tuner;
+    player: StreamingPlayer;
+    cd: CdPlayer;
+    projector: Projector;
+    lights: TheaterLights;
+    screen: Screen;
+    popper: PopcornPopper;
+  }) {
     this.amp = amp;
     this.tuner = tuner;
     this.player = player;
