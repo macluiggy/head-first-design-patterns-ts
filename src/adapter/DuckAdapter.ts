@@ -3,7 +3,7 @@ import Turkey from "./Turkey";
 
 export default class DuckAdapter implements Turkey {
   private duck: Duck;
-  private rand
+  private rand: Readonly<number>;
   constructor(duck: Duck) {
     this.duck = duck;
     this.rand = Math.floor(Math.random() * 5);
