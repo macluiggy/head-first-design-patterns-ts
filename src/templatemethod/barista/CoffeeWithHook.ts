@@ -8,6 +8,6 @@ export default class CoffeeWithHook extends CaffeineBeverageWithHook {
     console.log("Adding Sugar and Milk");
   }
   customerWantsCondiments(): boolean {
-    return window.confirm("Do you want milk and sugar?");
+    return Math.random() < 0.5;
   }
 }

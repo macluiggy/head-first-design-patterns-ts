@@ -8,6 +8,6 @@ export default class TeaWithHook extends CaffeineBeverageWithHook {
     console.log("Adding Lemon");
   }
   customerWantsCondiments(): boolean {
-    return window.confirm("Do you want lemon?");
+    return Math.random() < 0.5;
   }
 }
