@@ -1,5 +1,13 @@
 export default abstract class Car {
-  create(): void {}
+  buildCar(): void {
+    this.contructEsqueleton();
+    this.addEngine();
+    this.addWheels();
+    this.addBody();
+    this.addFuel();
+    this.addElectronics();
+    this.addAccessories();
+  }
   contructEsqueleton(): void {
     console.log("Building car esqueleton");
   }
