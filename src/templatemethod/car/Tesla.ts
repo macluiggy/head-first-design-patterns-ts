@@ -1,6 +1,6 @@
-import Car from "./Car";
+import Car, { ElectricCar } from "./Car";
 
-export default class Tesla extends Car {
+export default class Tesla extends Car implements ElectricCar {
   addEngine(): void {
     console.log("Adding Tesla engine");
   }
@@ -12,5 +12,8 @@ export default class Tesla extends Car {
   }
   addFuel(): void {
     console.log("Electric car, no fuel needed");
+  }
+  addBattery(): void {
+    console.log("Adding Tesla battery");
   }
 }

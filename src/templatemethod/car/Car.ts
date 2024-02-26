@@ -1,3 +1,6 @@
+export interface ElectricCar {
+  addBattery(): void;
+}
 export default abstract class Car {
   buildCar(): void {
     this.contructEsqueleton();
