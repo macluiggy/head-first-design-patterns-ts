@@ -13,15 +13,16 @@ export default class Waitress {
   }
 
   printMenu(): void {
-    const pancakeIterator = this.pancakeHouseMenu.createIterator();
-    const dinerIterator = this.dinerMenu.createIterator();
-    const cafeIterator = this.cafeMenu.createIterator();
+    const pancakeIterator: Iterator<MenuItem> =
+      this.pancakeHouseMenu.createIterator();
+    const dinerIterator: Iterator<MenuItem> = this.dinerMenu.createIterator();
+    const cafeIterator: Iterator<MenuItem> = this.cafeMenu.createIterator();
 
-    console.log('MENU\n----\nBREAKFAST');
+    console.log("MENU\n----\nBREAKFAST");
     this.printMenuItems(pancakeIterator);
-    console.log('\nLUNCH');
+    console.log("\nLUNCH");
     this.printMenuItems(dinerIterator);
-    console.log('\nDINNER');
+    console.log("\nDINNER");
     this.printMenuItems(cafeIterator);
   }
 
@@ -29,7 +30,9 @@ export default class Waitress {
     let result = iterator.next();
     while (!result.done) {
       const menuItem: MenuItem = result.value;
-      console.log(`${menuItem.getName()}, ${menuItem.getPrice()} -- ${menuItem.getDescription()}`);
+      console.log(
+        `${menuItem.getName()}, ${menuItem.getPrice()} -- ${menuItem.getDescription()}`
+      );
       result = iterator.next();
     }
   }

@@ -22,6 +22,7 @@ export default class DinerMenuIterator implements Iterator<MenuItem> {
   }
 
   remove(): void {
+    throw new Error("You shouldn't be trying to remove menu items.");
     if (this.position <= 0) {
       throw new Error(
         "You can't remove an item until you've done at least one next()"
