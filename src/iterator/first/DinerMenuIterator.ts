@@ -1,3 +1,4 @@
+import Iterator from "./Iterator";
 import MenuItem from "./MenuItem";
 
 export default class DinerMenuIterator implements Iterator<MenuItem> {
