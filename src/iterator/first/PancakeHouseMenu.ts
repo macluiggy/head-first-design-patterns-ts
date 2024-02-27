@@ -18,7 +18,9 @@ export default class PancakeHouseMenu {
   }
   // other menu methods here
   createIterator(): Iterator<MenuItem> {
-    const iterator = new PancakeHouseMenuIterator(this.menuItems);
+    // const iterator = new PancakeHouseMenuIterator(this.menuItems);
+    // return iterator;
+    const iterator = this.menuItems.values();
     return iterator;
   }
 }

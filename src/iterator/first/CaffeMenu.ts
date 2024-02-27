@@ -1,8 +1,9 @@
+import CaffeMenuIterator from "./CaffeMenuIterator";
 import Menu from "./Menu";
 import MenuItem from "./MenuItem";
 
 export default class CaffeMenu implements Menu {
-  menuItems: Map<string, any> = new Map();
+  menuItems: Map<string, MenuItem> = new Map();
 
   constructor() {
     this.addItem('Veggie Burger and Air Fries', 'Veggie burger on a whole wheat bun, lettuce, tomato, and fries', true, 3.99);
@@ -14,11 +15,14 @@ export default class CaffeMenu implements Menu {
     this.menuItems.set(name, new MenuItem(name, description, vegetarian, price));
   }
 
-  getMenuItems(): Map<string, any> {
+  getMenuItems(): Map<string, MenuItem> {
     return this.menuItems;
   }
 
-  createIterator(): Iterator<any> {
-    return this.menuItems.values();
+  createIterator(): Iterator<MenuItem> {
+    // const iterator = new CaffeMenuIterator(this.menuItems);
+    // return iterator;
+    const iterator = this.menuItems.values();
+    return iterator;
   }
 }
