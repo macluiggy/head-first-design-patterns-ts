@@ -15,7 +15,11 @@ export default class Waitress {
   printMenu(): void {
     const pancakeIterator: Iterator<MenuItem> =
       this.pancakeHouseMenu.createIterator();
-    const dinerIterator: Iterator<MenuItem> = this.dinerMenu.createIterator();
+    const dinerIterator: Iterator<
+      MenuItem,
+      MenuItem,
+      MenuItem | undefined | null
+    > = this.dinerMenu.createIterator();
     const cafeIterator: Iterator<MenuItem> = this.cafeMenu.createIterator();
 
     console.log("MENU\n----\nBREAKFAST");
