@@ -8,13 +8,14 @@ const breakfastItems = pancakeHouseMenu.getMenuItems();
 
 
 const dinerMenu: DinerMenu = new DinerMenu();
-const lunchItems: MenuItem[] = dinerMenu.getMenuItems();
+// const lunchItems: MenuItem[] = dinerMenu.getMenuItems();
+const lunchItems: Iterator<MenuItem> = dinerMenu.createIterator()
 // console.log('Diner Menu', lunchItems);
 
-for (const item of breakfastItems) {
-  console.log(item.toString());
-}
+// for (const item of breakfastItems) {
+//   console.log(item.toString());
+// }
 
-for (const item of lunchItems) {
+for (const item in lunchItems) {
   console.log(item.toString());
 }

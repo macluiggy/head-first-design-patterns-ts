@@ -1,3 +1,4 @@
+import DinerMenuIterator from "./DinerMenuIterator";
 import MenuItem from "./MenuItem";
 
 export default class DinerMenu {
@@ -18,8 +19,11 @@ export default class DinerMenu {
       this.numberOfItems += 1;
     }
   }
-  getMenuItems(): MenuItem[] {
-    return this.menuItems;
-  }
+  // getMenuItems(): MenuItem[] {
+  //   return this.menuItems;
+  // }
   // other menu methods here
+  createIterator(): Iterator<MenuItem> {
+    return new DinerMenuIterator(this.menuItems);
+  }
 }

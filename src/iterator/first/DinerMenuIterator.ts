@@ -34,4 +34,8 @@ export default class DinerMenuIterator implements Iterator<MenuItem> {
       this.items[this.items.length - 1] = null;
     }
   }
+
+  toString(): string {
+    return "Diner Menu Iterator";
+  }
 }
