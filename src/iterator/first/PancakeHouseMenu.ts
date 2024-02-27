@@ -1,4 +1,5 @@
 import MenuItem from "./MenuItem";
+import PancakeHouseMenuIterator from "./PancakeHouseMenuIterator";
 
 export default class PancakeHouseMenu {
   menuItems: Set<MenuItem> = new Set();
@@ -16,4 +17,8 @@ export default class PancakeHouseMenu {
     return this.menuItems;
   }
   // other menu methods here
+  createIterator(): Iterator<MenuItem> {
+    const iterator = new PancakeHouseMenuIterator(this.menuItems);
+    return iterator;
+  }
 }
