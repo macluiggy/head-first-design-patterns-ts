@@ -1,4 +1,5 @@
 import Menu from "./Menu";
+import MenuItem from "./MenuItem";
 
 export default class CaffeMenu implements Menu {
   menuItems: Map<string, any> = new Map();
@@ -10,7 +11,7 @@ export default class CaffeMenu implements Menu {
   }
 
   addItem(name: string, description: string, vegetarian: boolean, price: number) {
-    this.menuItems.set(name, { name, description, vegetarian, price });
+    this.menuItems.set(name, new MenuItem(name, description, vegetarian, price));
   }
 
   getMenuItems(): Map<string, any> {
