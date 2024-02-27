@@ -1,22 +1,22 @@
 import MenuItem from "./MenuItem";
 
 export default class DinerMenuIterator implements Iterator<MenuItem> {
-  list: (MenuItem | null)[];
+  items: (MenuItem | null)[];
   position: number = 0;
 
-  constructor(list: MenuItem[]) {
-    this.list = list;
+  constructor(items: MenuItem[]) {
+    this.items = items;
   }
 
   next(): IteratorResult<MenuItem> {
-    const menuItem: MenuItem = this.list[this.position] as MenuItem;
+    const menuItem: MenuItem = this.items[this.position] as MenuItem;
     this.position++;
-    return { value: menuItem, done: this.position > this.list.length };
+    return { value: menuItem, done: this.position > this.items.length };
   }
 
   hasNext(): boolean {
     return (
-      this.position < this.list.length && this.list[this.position] !== null
+      this.position < this.items.length && this.items[this.position] !== null
     );
   }
 
@@ -26,11 +26,11 @@ export default class DinerMenuIterator implements Iterator<MenuItem> {
         "You can't remove an item until you've done at least one next()"
       );
     }
-    if (this.list[this.position - 1] !== null) {
-      for (let i = this.position - 1; i < this.list.length - 1; i++) {
-        this.list[i] = this.list[i + 1];
+    if (this.items[this.position - 1] !== null) {
+      for (let i = this.position - 1; i < this.items.length - 1; i++) {
+        this.items[i] = this.items[i + 1];
       }
-      this.list[this.list.length - 1] = null;
+      this.items[this.items.length - 1] = null;
     }
   }
 }
