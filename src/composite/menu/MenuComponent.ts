@@ -1,4 +1,4 @@
-export default class MenuComponent {
+export default abstract class MenuComponent {
   add(menuComponent: MenuComponent): void {
     throw new Error("Unsupported Operation");
   }
