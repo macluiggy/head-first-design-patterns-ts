@@ -1,12 +1,12 @@
 export default class GumballMachine {
   // final static SOLD_OUT = 0;
-  public static SOLD_OUT: number = 0;
-  public static NO_QUARTER: number = 1;
-  public static HAS_QUARTER: number = 2;
-  public static SOLD: number = 3;
+  public static SOLD_OUT: string = 'SOLD_OUT';
+  public static NO_QUARTER: string = 'NO_QUARTER'
+  public static HAS_QUARTER: string = 'HAS_QUARTER';
+  public static SOLD: string = 'SOLD';
 
   private count: number = 0;
-  private state: number = 0;
+  private state: string = GumballMachine.SOLD_OUT;
 
   constructor(count: number) {
     this.count = count;
