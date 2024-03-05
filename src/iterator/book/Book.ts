@@ -1,3 +1,5 @@
+import BookItem from "./BookItem";
+
 export default interface Book {
-  createIterator(): Iterator<string>;
+  createIterator(): Iterator<BookItem>;
 }

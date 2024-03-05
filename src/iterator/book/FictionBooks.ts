@@ -1,13 +1,14 @@
 import Book from "./Book";
+import BookItem from "./BookItem";
 
 export default class FictionBook implements Book {
-  private books: string[] = [];
+  private books: BookItem[] = [];
 
-  addBook(book: string): void {
+  addBook(book: BookItem): void {
     this.books.push(book);
   }
 
-  createIterator(): Iterator<string> {
+  createIterator(): Iterator<BookItem> {
     return this.books.values();
   }
 }
