@@ -40,4 +40,37 @@ export default class GumballMachine {
       console.log("You can't eject, you haven't inserted a quarter yet");
     }
   }
+
+  public turnCrank(): void {
+    if (this.state === GumballMachine.SOLD) {
+      console.log("Turning twice doesn't get you another gumball!");
+    } else if (this.state === GumballMachine.NO_QUARTER) {
+      console.log("You turned but there's no quarter");
+    } else if (this.state === GumballMachine.SOLD_OUT) {
+      console.log("You turned, but there are no gumballs");
+    } else if (this.state === GumballMachine.HAS_QUARTER) {
+      console.log("You turned...");
+      this.state = GumballMachine.SOLD;
+      this.dispense();
+    }
+  }
+
+  public dispense(): void {
+    if (this.state === GumballMachine.SOLD) {
+      console.log("A gumball comes rolling out the slot");
+      this.count = this.count - 1;
+      if (this.count === 0) {
+        console.log("Oops, out of gumballs!");
+        this.state = GumballMachine.SOLD_OUT;
+      } else {
+        this.state = GumballMachine.NO_QUARTER;
+      }
+    } else if (this.state === GumballMachine.NO_QUARTER) {
+      console.log("You need to pay first");
+    } else if (this.state === GumballMachine.SOLD_OUT) {
+      console.log("No gumball dispensed");
+    } else if (this.state === GumballMachine.HAS_QUARTER) {
+      console.log("No gumball dispensed");
+    }
+  }
 }
