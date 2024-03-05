@@ -2,10 +2,10 @@ import Book from "./Book";
 import BookItem from "./BookItem";
 
 export default class NonFictionBooks implements Book {
-  private books: BookItem[] = [];
+  private books: Set<BookItem> = new Set();
 
   addBook(book: BookItem): void {
-    this.books.push(book);
+    this.books.add(book);
   }
 
   createIterator(): Iterator<BookItem> {
