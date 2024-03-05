@@ -4,8 +4,14 @@ export default abstract class SoftwareDevelopmentProcess {
   abstract deploy(): void;
 
   public executeProcess(): void {
-    this.test();
-    this.review();
-    this.deploy();
+    if (!this.isLocalDevelopment()) {
+      this.test();
+      this.review();
+      this.deploy();
+    }
+  }
+
+  public isLocalDevelopment(): boolean {
+    return Math.random() < 0.5;
   }
 }
