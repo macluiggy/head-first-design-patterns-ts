@@ -2,7 +2,6 @@ import Book from "./Book";
 import BookItem from "./BookItem";
 
 export default class Borrower {
-  private name: string;
   private books: Book[] = [];
 
   constructor(books: Book[]) {
