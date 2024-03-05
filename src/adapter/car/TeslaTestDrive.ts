@@ -1,5 +1,6 @@
 import Ford2024 from "./Ford2024";
 import FordAdapter from "./FordAdapter";
+import Tesla from "./Tesla";
 import TeslaXModel from "./TexlaXModel";
 export default class TeslaTestDrive {
   static main(): void {
@@ -16,7 +17,7 @@ export default class TeslaTestDrive {
     console.log("\nThe Ford car adapted to a Tesla says...");
     TeslaTestDrive.testTesla(fordAdaptedToTesla);
   }
-  static testTesla(tesla: TeslaXModel): void {
+  static testTesla(tesla: Tesla): void {
     tesla.powerOnEngine();
     tesla.speedUp();
     tesla.applyBrakeSystem();

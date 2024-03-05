@@ -1,3 +1,4 @@
+import Ford from "./Ford";
 import Ford2024 from "./Ford2024";
 import FordAdapter from "./FordAdapter";
 import TeslaAdapter from "./TeslaAdapter";
@@ -15,7 +16,7 @@ export default class FordTestDrive {
     FordTestDrive.testFord(new TeslaAdapter(tesla));
   }
 
-  static testFord(ford2024: Ford2024): void {
+  static testFord(ford2024: Ford): void {
     ford2024.startEngine();
     ford2024.accelerate();
     ford2024.brake();
