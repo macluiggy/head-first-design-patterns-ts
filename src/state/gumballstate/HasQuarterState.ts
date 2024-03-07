@@ -1,9 +1,9 @@
 import GumballMachine from "./GumballMachine";
-
+type Random = number;
 export default class HasQuarterState {
   gumballMachine: GumballMachine;
   // Random randomWinner = new Random(System.currentTimeMillis());
-  randomWinner: number = Math.floor(Math.random() * 10);
+  randomWinner: Random = Math.floor(Math.random() * 10);
 
   constructor(gumballMachine: GumballMachine) {
     this.gumballMachine = gumballMachine;
