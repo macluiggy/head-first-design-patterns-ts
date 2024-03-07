@@ -1,6 +1,7 @@
 import GumballMachine from "./GumballMachine";
+import State from "./State";
 type Random = number;
-export default class HasQuarterState {
+export default class HasQuarterState implements State {
   gumballMachine: GumballMachine;
   // Random randomWinner = new Random(System.currentTimeMillis());
   randomWinner: Random = Math.floor(Math.random() * 10);
@@ -33,5 +34,9 @@ export default class HasQuarterState {
 
   dispense(): void {
     console.log("No gumball dispensed");
+  }
+
+  refill(): void {
+    console.log("Can't refill now");
   }
 }

@@ -29,4 +29,8 @@ export default class SoldState implements State {
       this.gumballMachine.setState(this.gumballMachine.getSoldOutState());
     }
   }
+
+  public refill(): void {
+    console.log("Can't refill now");
+  }
 }

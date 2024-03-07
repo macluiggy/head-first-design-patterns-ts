@@ -35,4 +35,8 @@ export default class WinnerState implements State {
       }
     }
   }
+
+  public refill(): void {
+    console.log("Can't refill now");
+  }
 }

@@ -1,6 +1,7 @@
 import GumballMachine from "./GumballMachine";
+import State from "./State";
 
-export default class NoQuarterState {
+export default class NoQuarterState implements State {
   gumballMachine: GumballMachine;
 
   constructor(gumballMachine: GumballMachine) {
@@ -22,5 +23,9 @@ export default class NoQuarterState {
 
   dispense(): void {
     console.log("You need to pay first");
+  }
+
+  refill(): void {
+    console.log("Can't refill now");
   }
 }
