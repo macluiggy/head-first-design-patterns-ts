@@ -62,7 +62,6 @@ export default class GumballMachine {
     this.count += count;
     // this.state = this.noQuarterState;
     console.log("The gumball machine was just refilled; its new count is: " + this.count);
-    
     this.state.refill();
   }
 
