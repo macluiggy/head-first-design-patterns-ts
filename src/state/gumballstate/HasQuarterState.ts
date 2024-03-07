@@ -2,6 +2,8 @@ import GumballMachine from "./GumballMachine";
 
 export default class HasQuarterState {
   gumballMachine: GumballMachine;
+  // Random randomWinner = new Random(System.currentTimeMillis());
+  randomWinner: number = Math.floor(Math.random() * 10);
 
   constructor(gumballMachine: GumballMachine) {
     this.gumballMachine = gumballMachine;
@@ -16,9 +18,17 @@ export default class HasQuarterState {
     this.gumballMachine.setState(this.gumballMachine.getNoQuarterState());
   }
 
+  // turnCrank(): void {
+  //   console.log("You turned...");
+  //   this.gumballMachine.setState(this.gumballMachine.getSoldState());
+  // }
   turnCrank(): void {
     console.log("You turned...");
-    this.gumballMachine.setState(this.gumballMachine.getSoldState());
+    if (this.randomWinner === 0 && this.gumballMachine.getCount() > 1) {
+      this.gumballMachine.setState(this.gumballMachine.getWinnerState());
+    } else {
+      this.gumballMachine.setState(this.gumballMachine.getSoldState());
+    }
   }
 
   dispense(): void {
