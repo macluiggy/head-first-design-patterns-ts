@@ -9,7 +9,7 @@ export default class RedState implements TrafficLightState {
 
   changeToNextState(): void {
     console.log('Changing state to green');
-    this.TrafficLight.changeState(this.TrafficLight.getFlashingRedState());
+    this.TrafficLight.changeState(this.TrafficLight.getRedState());
   }
 
   handleTraffic(): void {
