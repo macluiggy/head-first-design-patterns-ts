@@ -12,10 +12,11 @@ export default class TrafficLight {
   flashingRedState: TrafficLightState;
 
   constructor() {
-    this.redState = this.getRedState();
+    this.redState = new RedState(this);
     this.greenState = new GreenState(this);
     this.yellowState = new YellowState(this);
     this.flashingRedState = new FlashingRedState(this);
+    this.currentState = this.redState;
   }
 
   changeState(newState: TrafficLightState): void {
