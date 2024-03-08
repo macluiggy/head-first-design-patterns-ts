@@ -11,11 +11,12 @@ export default class GumballMachine {
   private hasQuarterState: State;
   private soldState: State;
   private winnerState: State;
+  private location: string;
 
   private state: State;
   private count: number = 0;
 
-  constructor(numberGumballs: number) {
+  constructor(location: string, numberGumballs: number) {
     this.soldOutState = new SoldOutState(this);
     this.noQuarterState = new NoQuarterState(this);
     this.hasQuarterState = new HasQuarterState(this);
@@ -28,6 +29,7 @@ export default class GumballMachine {
     } else {
       this.state = this.soldOutState;
     }
+    this.location = location;
   }
 
   public insertQuarter(): void {
@@ -95,5 +97,9 @@ export default class GumballMachine {
     result += "\n";
     result += "Machine is " + this.state + "\n";
     return result;
+  }
+
+  public getLocation(): string {
+    return this.location;
   }
 }
