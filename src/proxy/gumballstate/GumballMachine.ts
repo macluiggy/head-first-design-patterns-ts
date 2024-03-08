@@ -102,4 +102,8 @@ export default class GumballMachine {
   public getLocation(): string {
     return this.location;
   }
+
+  public getState(): State {
+    return this.state;
+  }
 }
