@@ -3,7 +3,7 @@ import GumballMonitor from "./GumballMonitor";
 
 export default class GumballMonitorTestDrive {
   public static main(): void {
-    if (process.argv.length < 2) {
+    if (process.argv.length < 4) {
       console.log("GumballMachine <name> <inventory>");
       process.exit(1);
     }
