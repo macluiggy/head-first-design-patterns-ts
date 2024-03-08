@@ -2,13 +2,13 @@ import GumballMachine from "./GumballMachine";
 import GumballMonitor from "./GumballMonitor";
 
 export default class GumballMonitorTestDrive {
-  public static main(): void {
-    if (process.argv.length < 4) {
+  public static main(args: string[] = process.argv): void {
+    if (args.length < 4) {
       console.log("GumballMachine <name> <inventory>");
       process.exit(1);
     }
-    const location = process.argv[2];
-    const count = parseInt(process.argv[3]);
+    const location = args[2];
+    const count = parseInt(args[3], 10);
     // const gumballMachine = new GumballMachine("Seattle", 112);
     const gumballMachine = new GumballMachine(location, count);
     const monitor = new GumballMonitor(gumballMachine);
