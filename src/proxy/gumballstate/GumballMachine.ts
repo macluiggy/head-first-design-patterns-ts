@@ -22,6 +22,7 @@ export default class GumballMachine
   private count: number = 0;
 
   constructor(location: string, numberGumballs: number) {
+    super();
     this.soldOutState = new SoldOutState(this);
     this.noQuarterState = new NoQuarterState(this);
     this.hasQuarterState = new HasQuarterState(this);
