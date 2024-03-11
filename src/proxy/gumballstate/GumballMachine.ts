@@ -21,6 +21,8 @@ export default class GumballMachine
   private state: State;
   private count: number = 0;
 
+  private static serialVersionUID: number = 2;
+
   constructor(location: string, numberGumballs: number) {
     super();
     this.soldOutState = new SoldOutState(this);
