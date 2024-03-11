@@ -1,5 +1,5 @@
 export default class Remote {
-  private location: string;
+  public location: string;
   private count: number;
 
   constructor(location: string, count: number) {

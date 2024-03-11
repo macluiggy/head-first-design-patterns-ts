@@ -16,7 +16,7 @@ export default class GumballMachine
   private hasQuarterState: State;
   private soldState: State;
   private winnerState: State;
-  private location: string;
+  public location: string;
 
   private state: State;
   private count: number = 0;
