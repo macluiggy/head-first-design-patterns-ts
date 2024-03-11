@@ -1,3 +1,3 @@
 export default interface Serializable {
-  serialize(): string;
+  serialize?(): string;
 }

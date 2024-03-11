@@ -3,6 +3,7 @@ import State from "./State";
 
 export default class NoQuarterState implements State {
   gumballMachine: GumballMachine;
+  private static readonly serialVersionUID = 2;
 
   constructor(gumballMachine: GumballMachine) {
     this.gumballMachine = gumballMachine;
