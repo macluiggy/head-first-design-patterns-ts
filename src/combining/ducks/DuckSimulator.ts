@@ -1,6 +1,4 @@
 import DuckCall from "./DuckCall";
-import Goose from "./Goose";
-import GooseAdapter from "./GooseAdapter";
 import MallardDuck from "./MallardDuck";
 import Quackable from "./Quackable";
 import RedheadDuck from "./RedheadDuck";
@@ -17,7 +15,6 @@ export default class DuckSimulator {
     const redheadDuck: Quackable = new RedheadDuck();
     const duckCall: Quackable = new DuckCall();
     const rubberDuck: Quackable = new RubberDuck();
-    const gooseDuck: Quackable = new GooseAdapter(new Goose());
     
     console.log('\nDuck Simulator');
 
@@ -25,7 +22,6 @@ export default class DuckSimulator {
     this._simulate(redheadDuck);
     this._simulate(duckCall);
     this._simulate(rubberDuck);
-    this._simulate(gooseDuck);
 
   }
 
