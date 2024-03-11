@@ -1,11 +1,16 @@
+import GumballMachineRemote from "./GumballMachineRemote";
 import HasQuarterState from "./HasQuarterState";
 import NoQuarterState from "./NoQuarterState";
 import SoldOutState from "./SoldOutState";
 import SoldState from "./SoldState";
 import State from "./State";
+import UnicastRemoteObject from "./UnicastRemoteObject";
 import WinnerState from "./WinnerState";
 
-export default class GumballMachine {
+export default class GumballMachine
+  extends UnicastRemoteObject
+  implements GumballMachineRemote
+{
   private soldOutState: State;
   private noQuarterState: State;
   private hasQuarterState: State;
@@ -63,7 +68,9 @@ export default class GumballMachine {
   public refill(count: number): void {
     this.count += count;
     // this.state = this.noQuarterState;
-    console.log("The gumball machine was just refilled; its new count is: " + this.count);
+    console.log(
+      "The gumball machine was just refilled; its new count is: " + this.count
+    );
     this.state.refill();
   }
 
