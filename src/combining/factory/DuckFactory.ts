@@ -1,5 +1,7 @@
+import GooseAdapter from "../adapter/GooseAdapter";
 import AbstractDuckFactory from "./AbstractDuckFactory";
 import DuckCall from "./DuckCall";
+import Goose from "./Goose";
 import MallardDuck from "./MallardDuck";
 import Quackable from "./Quackable";
 import RedheadDuck from "./RedheadDuck";
@@ -20,5 +22,9 @@ export default class DuckFactory extends AbstractDuckFactory {
 
   public createRubberDuck(): Quackable {
     return new RubberDuck();
+  }
+
+  public createGooseDuck(): Quackable {
+    return new GooseAdapter(new Goose());
   }
 }

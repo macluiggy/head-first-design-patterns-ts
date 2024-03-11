@@ -5,6 +5,8 @@ import MallardDuck from "./MallardDuck";
 import RedheadDuck from "./RedheadDuck";
 import DuckCall from "./DuckCall";
 import RubberDuck from "./RubberDuck";
+import GooseAdapter from "../adapter/GooseAdapter";
+import Goose from "./Goose";
 
 export default class CountingDuckFactory extends AbstractDuckFactory {
   public createMallardDuck(): Quackable {
@@ -21,5 +23,9 @@ export default class CountingDuckFactory extends AbstractDuckFactory {
 
   public createRubberDuck(): Quackable {
     return new QuackCounter(new RubberDuck());
+  }
+
+  public createGooseDuck(): Quackable {
+    return new GooseAdapter(new Goose());
   }
 }

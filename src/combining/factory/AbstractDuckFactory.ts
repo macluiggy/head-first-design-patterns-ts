@@ -5,4 +5,5 @@ export default abstract class AbstractDuckFactory {
   public abstract createRedheadDuck(): Quackable;
   public abstract createDuckCall(): Quackable;
   public abstract createRubberDuck(): Quackable;
+  public abstract createGooseDuck(): Quackable;
 }
