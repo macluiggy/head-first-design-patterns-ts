@@ -5,8 +5,6 @@ import MallardDuck from "./MallardDuck";
 import Quackable from "./Quackable";
 import RedheadDuck from "./RedheadDuck";
 import RubberDuck from "./RubberDuck";
-import QuackCounter from "./QuackCounter";
-
 
 export default class DuckSimulator {
   public static main(): void {
@@ -15,11 +13,11 @@ export default class DuckSimulator {
   }
 
   public simulate(): void {
-    const mallardDuck: Quackable = new QuackCounter(new MallardDuck());
-    const redheadDuck: Quackable = new QuackCounter(new RedheadDuck());
-    const duckCall: Quackable = new QuackCounter(new DuckCall());
-    const rubberDuck: Quackable = new QuackCounter(new RubberDuck());
-    const gooseDuck: Quackable = new QuackCounter(new GooseAdapter(new Goose()));
+    const mallardDuck: Quackable = new MallardDuck();
+    const redheadDuck: Quackable = new RedheadDuck();
+    const duckCall: Quackable = new DuckCall();
+    const rubberDuck: Quackable = new RubberDuck();
+    const gooseDuck: Quackable = new GooseAdapter(new Goose());
     
     console.log('\nDuck Simulator');
 
@@ -29,7 +27,6 @@ export default class DuckSimulator {
     this._simulate(rubberDuck);
     this._simulate(gooseDuck);
 
-    console.log(`The ducks quacked ${QuackCounter.getQuacks()} times`);
   }
 
   private _simulate(duck: Quackable): void {
