@@ -50,8 +50,8 @@ export default class DuckSimulator {
     console.log('\nDuck Simulator: Whole Flock Simulation');
     this._simulate(flockOfDucks);
 
-    // console.log('\nDuck Simulator: Mallard Flock Simulation');
-    // this._simulate(flockOfMallards);
+    console.log('\nDuck Simulator: Mallard Flock Simulation');
+    this._simulate(flockOfMallards);
   }
 
   private _simulate(duck: Quackable): void {
