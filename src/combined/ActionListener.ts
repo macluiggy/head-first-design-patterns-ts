@@ -1,3 +1,5 @@
+import ActionEvent from "./ActionEvent";
+
 export default interface ActionListener {
-  actionPerformed(): void;
+  actionPerformed(event: ActionEvent): void;
 }

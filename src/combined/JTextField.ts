@@ -9,4 +9,8 @@ export default class JTextField {
   setValue(value: number) {
     // Not implemented
   }
+  getText() {
+    // Not implemented
+    return "";
+  }
 }

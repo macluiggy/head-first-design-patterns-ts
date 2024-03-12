@@ -1,6 +1,7 @@
-export default class JMenuItem {
+export default class ActionEvent extends Event {
   model: any;
   constructor() {
+    super('11');
     this.model = null;
   }
   setText(text: string) {
@@ -9,6 +10,7 @@ export default class JMenuItem {
   setValue(value: number) {
     // Not implemented
   }
-
-  setEnabled(enabled: boolean) {}
+  getSource() {
+    return this.model;
+  }
 }
