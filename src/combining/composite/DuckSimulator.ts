@@ -2,6 +2,7 @@ import Quackable from "./Quackable";
 import AbstractDuckFactory from "./AbstractDuckFactory";
 import CountingDuckFactory from "./CountingDuckFactory";
 import QuackCounter from "./QuackCounter";
+import Flock from "./Flock";
 
 export default class DuckSimulator {
   public static main(): void {
@@ -21,17 +22,36 @@ export default class DuckSimulator {
     const duckCall: Quackable = abstractDuckFactory.createDuckCall();
     const rubberDuck: Quackable = abstractDuckFactory.createRubberDuck();
     const gooseDuck: Quackable = abstractDuckFactory.createGooseDuck();
-
-    console.log("\nDuck Simulator");
-
-    this._simulate(mallardDuck);
-    this._simulate(redheadDuck);
-    this._simulate(duckCall);
-    this._simulate(rubberDuck);
-    this._simulate(gooseDuck);
-
-    console.log(`The ducks quacked ${QuackCounter.getQuacks()} times`);
     
+    console.log('\nDuck Simulator: With Composite - Flocks');
+
+    const flockOfDucks: Flock = new Flock();
+
+    flockOfDucks.add(mallardDuck);
+    flockOfDucks.add(redheadDuck);
+    flockOfDucks.add(duckCall);
+    flockOfDucks.add(rubberDuck);
+    flockOfDucks.add(gooseDuck);
+
+    const flockOfMallards: Flock = new Flock();
+
+    const mallardOne: Quackable = abstractDuckFactory.createMallardDuck();
+    const mallardTwo: Quackable = abstractDuckFactory.createMallardDuck();
+    const mallardThree: Quackable = abstractDuckFactory.createMallardDuck();
+    const mallardFour: Quackable = abstractDuckFactory.createMallardDuck();
+
+    flockOfMallards.add(mallardOne);
+    flockOfMallards.add(mallardTwo);
+    flockOfMallards.add(mallardThree);
+    flockOfMallards.add(mallardFour);
+
+    flockOfDucks.add(flockOfMallards);
+    
+    console.log('\nDuck Simulator: Whole Flock Simulation');
+    this._simulate(flockOfDucks);
+
+    // console.log('\nDuck Simulator: Mallard Flock Simulation');
+    // this._simulate(flockOfMallards);
   }
 
   private _simulate(duck: Quackable): void {
