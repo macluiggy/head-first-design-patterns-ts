@@ -3,6 +3,7 @@ import AbstractDuckFactory from "./AbstractDuckFactory";
 import CountingDuckFactory from "./CountingDuckFactory";
 import QuackCounter from "./QuackCounter";
 import Flock from "./Flock";
+import Quackologist from "./Quackologist";
 
 export default class DuckSimulator {
   public static main(): void {
@@ -46,12 +47,19 @@ export default class DuckSimulator {
     flockOfMallards.add(mallardFour);
 
     flockOfDucks.add(flockOfMallards);
+
+    console.log('\nDuck Simulator: With Observer');
+    const quackologist: Quackologist = new Quackologist();
+    flockOfDucks.registerObserver(quackologist);
+    
     
     console.log('\nDuck Simulator: Whole Flock Simulation');
     this._simulate(flockOfDucks);
 
-    console.log('\nDuck Simulator: Mallard Flock Simulation');
-    this._simulate(flockOfMallards);
+    // console.log('\nDuck Simulator: Mallard Flock Simulation');
+    // this._simulate(flockOfMallards);
+
+    console.log(`The ducks quacked ${QuackCounter.getQuacks()} times`);
   }
 
   private _simulate(duck: Quackable): void {

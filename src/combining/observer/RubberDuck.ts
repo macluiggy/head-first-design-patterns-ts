@@ -9,6 +9,7 @@ export default class RubberDuck implements Quackable {
   }
   quack(): void {
     console.log('Squeak');
+    this.observable.notifyObservers();
   }
   registerObserver(observer: Observer): void {
     this.observable.registerObserver(observer);
