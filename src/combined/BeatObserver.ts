@@ -1,3 +1,4 @@
-export default class BeatObserver {
-  updateBeat(): void{}
+export default interface BeatObserver {
+  updateBeat(): void;
+  observerType?: 'beat'
 }

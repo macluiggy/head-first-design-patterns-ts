@@ -64,23 +64,23 @@ export default class BeatModel implements BeatModelInterface {
 
   registerObserver(o: BeatObserver): void;
   registerObserver(o: BPMObserver): void;
-  registerObserver(o: unknown): void {
-    if (o instanceof BeatObserver) {
+  registerObserver(o: BeatObserver | BPMObserver): void {
+    if (o.observerType === "beat") {
       this.beatObservers.push(o);
-    } else if (o instanceof BPMObserver) {
+    } else if (o.observerType === "bpm") {
       this.bpmObservers.push(o);
     }
   }
 
   removeObserver(o: BeatObserver): void;
   removeObserver(o: BPMObserver): void;
-  removeObserver(o: unknown): void {
-    if (o instanceof BeatObserver) {
+  removeObserver(o: BeatObserver | BPMObserver): void {
+    if (o.observerType === "beat") {
       const index = this.beatObservers.indexOf(o);
       if (index >= 0) {
         this.beatObservers.splice(index, 1);
       }
-    } else if (o instanceof BPMObserver) {
+    } else if (o.observerType === "bpm") {
       const index = this.bpmObservers.indexOf(o);
       if (index >= 0) {
         this.bpmObservers.splice(index, 1);
