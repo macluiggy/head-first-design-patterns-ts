@@ -1,18 +1,20 @@
+import Duck from "./Duck";
 import Observable from "./Observable";
 import Observer from "./Observer";
 import Quackable from "./Quackable";
 
-export default class QuackCounter implements Quackable {
+export default class QuackCounter extends Duck implements Quackable {
   duck: Quackable;
   static numberOfQuacks: number = 0;
   constructor(duck: Quackable) {
+    super();
     this.duck = duck;
   }
 
   quack(): void {
     this.duck.quack();
     QuackCounter.numberOfQuacks++
-    this.notifyObservers();
+    super.notifyObservers();
   }
 
   static getQuacks(): number {
