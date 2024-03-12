@@ -1,3 +1,3 @@
-export default interface BPMObserver {
-  updateBPM(): void;
+export default class BPMObserver {
+  updateBPM(): void {}
 }
