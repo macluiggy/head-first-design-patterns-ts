@@ -12,6 +12,7 @@ export default class QuackCounter implements Quackable {
   quack(): void {
     this.duck.quack();
     QuackCounter.numberOfQuacks++
+    this.notifyObservers();
   }
 
   static getQuacks(): number {
