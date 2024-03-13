@@ -58,6 +58,10 @@ export default class DJView
     if (event.getSource() === this.setBPMButton) {
       let bpm: number = parseInt(this.bpmTextField.getText());
       this.controller.setBPM(bpm);
+    } else if (event.getSource() === this.increaseBPMButton) {
+      this.controller.increaseBPM();
+    } else if (event.getSource() === this.decreaseBPMButton) {
+      this.controller.decreaseBPM();
     }
   }
   updateBPM(): void {
