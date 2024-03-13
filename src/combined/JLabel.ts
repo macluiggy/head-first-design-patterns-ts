@@ -1,6 +1,6 @@
 export default class JLabel {
   model: any;
-  constructor() {
+  constructor(text: string, swingConstants: number) {
     this.model = null;
   }
   setText(text: string) {

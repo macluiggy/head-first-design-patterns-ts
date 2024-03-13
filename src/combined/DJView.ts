@@ -14,6 +14,7 @@ import JTextField from "./JTextField";
 import ActionEvent from "./ActionEvent";
 import Dimension from "./Dimension";
 import GridLayout from "./GridLayout";
+import SwingConstants from "./SwingConstants";
 
 export default class DJView
   implements ActionListener, BeatObserver, BPMObserver
@@ -145,6 +146,9 @@ export default class DJView
     this.menu.add(exit);
     this.menuBar.add(this.menu);
     this.controlFrame.setJMenuBar(this.menuBar);
+
+    this.bpmTextField = new JTextField(2);
+    let bpmLabel = new JLabel("Enter BPM:", SwingConstants.RIGHT);
     
   }
   enableStopMenuItem(): void {
