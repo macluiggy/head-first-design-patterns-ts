@@ -1,12 +1,18 @@
+import JMenuItem from "./JMenuItem";
+
 export default class JMenuBar {
   model: any;
-  constructor() {
-    this.model = null;
+  menu: string
+  constructor(menu: string) {
+    this.menu = menu;
   }
   setText(text: string) {
     // Not implemented
   }
   setValue(value: number) {
+    // Not implemented
+  }
+  add(menu: JMenuItem) {
     // Not implemented
   }
 }

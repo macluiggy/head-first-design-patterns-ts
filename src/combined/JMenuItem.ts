@@ -1,7 +1,8 @@
 export default class JMenuItem {
   model: any;
-  constructor() {
-    this.model = null;
+  menuItem:string
+  constructor(menuItem: string) {
+    this.menuItem = menuItem;
   }
   setText(text: string) {
     // Not implemented
@@ -11,4 +12,8 @@ export default class JMenuItem {
   }
 
   setEnabled(enabled: boolean) {}
+
+  addActionListener(listener: (event: any) => void) {
+    // Not implemented
+  }
 }

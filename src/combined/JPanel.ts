@@ -1,6 +1,9 @@
+import GridLayout from "./GridLayout";
+
 export default class JPanel {
   model: any;
-  constructor() {
-    this.model = null;
+  gridLayout: GridLayout
+  constructor(gridLayout: GridLayout) {
+    this.gridLayout = gridLayout;
   }
 }

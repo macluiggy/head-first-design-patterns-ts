@@ -1,3 +1,4 @@
+import JMenu from './JMenu';
 export default class JMenuBar {
   model: any;
   constructor() {
@@ -7,6 +8,9 @@ export default class JMenuBar {
     // Not implemented
   }
   setValue(value: number) {
+    // Not implemented
+  }
+  add(menu: JMenu) {
     // Not implemented
   }
 }
