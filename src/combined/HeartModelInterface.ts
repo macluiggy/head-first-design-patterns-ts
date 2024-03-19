@@ -6,4 +6,6 @@ export default interface HeartModelInterface {
   getBPM(): number;
   registerObserver(o: unknown): void;
   removeObserver(o: unknown): void;
+  getHeartRate(): number;
+  beat(): void;
 }

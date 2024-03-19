@@ -1,11 +1,11 @@
 import BPMObserver from "./BPMObserver";
 import BeatModelInterface from "./BeatModelInterface";
 import BeatObserver from "./BeatObserver";
-import HeartModel from "./HeartModel";
+import HeartModelInterface from "./HeartModelInterface";
 
 export default class HeartAdapter implements BeatModelInterface {
-  heart: HeartModel;
-  constructor(heart: HeartModel) {
+  heart: HeartModelInterface;
+  constructor(heart: HeartModelInterface) {
     this.heart = heart;
   }
   on(): void {

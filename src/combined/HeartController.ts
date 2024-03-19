@@ -1,5 +1,6 @@
 import ControllerInterface from "./ControllerInterface";
 import DJView from "./DJView";
+import HeartAdapter from "./HeartAdapter";
 import HeartModelInterface from "./HeartModelInterface";
 
 export default class HeartController implements ControllerInterface {
@@ -7,7 +8,7 @@ export default class HeartController implements ControllerInterface {
   view: DJView;
   constructor(model: HeartModelInterface) {
     this.model = model;
-    this.view = new DJView(this, model);
+    this.view = new DJView(this, new HeartAdapter(model));
     this.view.createView();
     this.view.createControls();
     this.view.disableStopMenuItem();
