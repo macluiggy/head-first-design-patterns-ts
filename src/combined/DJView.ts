@@ -145,7 +145,7 @@ export default class DJView
 
     this.menu.add(exit);
     this.menuBar.add(this.menu);
-    this.controlFrame.setJMenuBar(this.menuBar);
+    // this.controlFrame.setJMenuBar(this.menuBar);
 
     this.bpmTextField = new JTextField(2);
     let bpmLabel = new JLabel("Enter BPM:", SwingConstants.RIGHT);
@@ -155,7 +155,7 @@ export default class DJView
     this.stopMenuItem.setEnabled(true);
   }
   disableStopMenuItem(): void {
-    console.log(this.stopMenuItem);
+    // console.log(this.stopMenuItem);
 
     this.stopMenuItem.setEnabled(false);
   }
@@ -185,6 +185,8 @@ export default class DJView
     }
   }
   updateBeat(): void {
-    this.beatBar.setValue(100);
+    // console.log(this.beatBar);
+    
+    // this.beatBar.setValue(100);
   }
 }

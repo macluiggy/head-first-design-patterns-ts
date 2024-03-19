@@ -12,7 +12,7 @@ export default class HeartController implements ControllerInterface {
     this.view.createView();
     this.view.createControls();
     this.view.disableStopMenuItem();
-    this.view.enableStartMenuItem();
+    this.view.disableStartMenuItem();
     this.model.initialize();
   }
   start(): void {

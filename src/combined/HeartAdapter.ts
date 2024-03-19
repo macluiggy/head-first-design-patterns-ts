@@ -26,7 +26,7 @@ export default class HeartAdapter implements BeatModelInterface {
   }
 
   initialize(): void {
-    this.heart.beat();
+    this.heart.initialize();
   }
 
   getBPM(): number {
