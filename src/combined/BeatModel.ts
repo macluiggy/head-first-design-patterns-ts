@@ -22,6 +22,8 @@ export default class BeatModel implements BeatModelInterface {
 
   initialize(): void {
     try {
+      console.log('BeatModel.initialize()');
+      
       this.clip = new Audio("clap.wav");
     } catch (ex) {
       console.error(ex);
@@ -29,6 +31,8 @@ export default class BeatModel implements BeatModelInterface {
   }
 
   on(): void {
+    console.log('BeatModel.on()');
+    
     this.bpm = 90;
     this.notifyBPMObservers();
     this.stop = false;
