@@ -2,6 +2,16 @@ import BeatModelInterface from "./BeatModelInterface";
 import BPMObserver from "./BPMObserver";
 import BeatObserver from "./BeatObserver";
 
+class Audio {
+  constructor(src: string) {
+    this.src = src;
+  }
+  src: string;
+  play() {
+    console.log("Playing audio: " + this.src);
+  }
+}
+
 export default class BeatModel implements BeatModelInterface {
   beatObservers: BeatObserver[] = [];
   bpmObservers: BPMObserver[] = [];
