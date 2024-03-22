@@ -27,3 +27,5 @@ export default class MiniDuckSimulator {
     model.performFly();
   }
 }
+
+MiniDuckSimulator.main();
