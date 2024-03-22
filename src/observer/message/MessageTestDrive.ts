@@ -13,8 +13,6 @@ export default class MessageTestDrive {
     messageService.sendMessage("Hello, World!", "Admin");
     messageService.registerObserver(user3);
     messageService.sendMessage("Hello, World!", "Admin");
-
-
   }
 }
 
