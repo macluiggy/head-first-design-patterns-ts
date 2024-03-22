@@ -23,7 +23,7 @@ export default class Game implements Subject {
     this.observers.splice(index, 1);
   }
 
-  updatePrice(price: number): void {
+  private updatePrice(price: number): void {
     this.price = this.hasDiscount ? price - price * this.discount : price;
     this.notifyObservers();
   }
