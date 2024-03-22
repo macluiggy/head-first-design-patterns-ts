@@ -10,28 +10,6 @@ export default class PhotoWithPhone {
     this.performOperations(cameraApp);
   }
 
-  public static getSharing(): string {
-    console.log("Share with txt (t), email (e), social media (s)?");
-    // const scanner = process.openStdin();
-    // const appName = scanner.next()
-    // scanner.close();
-    // return appName;
-    const rl = readline.createInterface({
-      input: process.stdin,
-      output: process.stdout,
-    });
-
-    let appName = "";
-    rl.question("Please enter the sharing method: ", (answer) => {
-      // TODO: Replace this with the code you want to execute after getting the input.
-      console.log(`Sharing method is: ${answer}`);
-      appName = answer;
-
-      rl.close();
-    });
-    return appName;
-  }
-
   public static performOperations(cameraApp: BasicCameraApp): void {
     const rl = readline.createInterface({
       input: process.stdin,
