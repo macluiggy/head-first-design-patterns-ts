@@ -1,7 +1,7 @@
 import FlyBehavior from "./FlyBehavior";
 import QuackBehavior from "./QuackBehavior";
 
-export default class Duck {
+export default abstract class Duck {
   flyBehavior: FlyBehavior;
   quackBehavior: QuackBehavior;
 
@@ -10,11 +10,25 @@ export default class Duck {
     this.quackBehavior = quackBehavior;
   }
 
+  public setFlyBehavior(flyBehavior: FlyBehavior) {
+    this.flyBehavior = flyBehavior;
+  }
+
+  public setQuackBehavior(quackBehavior: QuackBehavior) {
+    this.quackBehavior = quackBehavior;
+  }
+
+  public abstract display(): void;
+
   performFly() {
     this.flyBehavior.fly();
   }
 
   performQuack() {
     this.quackBehavior.quack();
+  }
+
+  swim() {
+    console.log("All ducks float, even decoys!");
   }
 }
