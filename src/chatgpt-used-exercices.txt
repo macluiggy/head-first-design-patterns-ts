@@ -1,2 +1,5 @@
 STRATEGY:
 PaymentStrategy
+
+OBSERVER
+weather station
