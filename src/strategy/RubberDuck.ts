@@ -4,7 +4,11 @@ import Squeak from "./Squeak";
 
 export default class RubberDuck extends Duck {
   constructor(flyBehavior: FlyNoWay, quackBehavior: Squeak) {
-    super(new FlyNoWay(), new Squeak());
+    super(new FlyNoWay(), {
+      quack() {
+        console.log("Squeak");
+      },
+    });
     this.setFlyBehavior(flyBehavior);
     this.setQuackBehavior(quackBehavior);
   }
