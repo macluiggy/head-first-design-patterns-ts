@@ -3,3 +3,4 @@ PaymentStrategy
 
 OBSERVER
 weather station
+message
