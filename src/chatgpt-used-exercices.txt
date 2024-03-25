@@ -4,3 +4,8 @@ PaymentStrategy
 OBSERVER
 weather station
 message
+
+DECORATOR
+coffee
+pizza
+starbuzz
