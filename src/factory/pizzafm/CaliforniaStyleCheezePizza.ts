@@ -1,6 +1,9 @@
 import Pizza from "../pizzas/Pizza";
 
 export default class CaliforniaStyleCheezePizza extends Pizza {
+  prepare(): void {
+    throw new Error("Method not implemented.");
+  }
   name: string;
   dough: string;
   sauce: string;
