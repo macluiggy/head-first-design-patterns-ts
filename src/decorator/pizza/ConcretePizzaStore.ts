@@ -1,17 +1,8 @@
 import Margherita from "./Margherita";
 import Pizza from "./Pizza";
+import { PizzaType } from "./PizzaType";
 
-enum PizzaType {
-  Margherita = "Margherita",
-  Pepperoni = "Pepperoni",
-  Hawaiian = "Hawaiian",
-}
 export default class ConcretePizzaStore {
-  private type: string;
-  constructor(type: string) {
-    this.type = type;
-  }
-
   public createPizza(type: string): Pizza {
     let pizza: Pizza;
     switch (type) {
