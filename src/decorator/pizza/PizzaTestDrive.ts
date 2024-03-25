@@ -4,6 +4,7 @@ import { PizzaType } from "./PizzaType";
 
 export default class PizzaTestDrive {
   public static main(): void {
+    // here we are using the factory method pattern to create a Margherita pizza and the decorator pattern to add extra cheese to it
     const margherita = new ConcretePizzaStore().createPizza(
       PizzaType.Margherita
     );
