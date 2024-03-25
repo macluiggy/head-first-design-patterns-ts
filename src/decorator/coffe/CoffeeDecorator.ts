@@ -1,17 +1,7 @@
-import Coffe from "./Coffe";
+import Coffe from "./Coffee";
 
 export default abstract class CoffeeDecorator implements Coffe {
-  protected decoratedCoffe: Coffe;
-
-  constructor(coffe: Coffe) {
-    this.decoratedCoffe = coffe;
-  }
-
-  cost(): number {
-    return this.decoratedCoffe.cost();
-  }
-
-  description(): string {
-    return this.decoratedCoffe.description();
-  }
+  abstract decoratedCoffee: Coffe;
+  abstract cost(): number;
+  abstract description(): string;
 }

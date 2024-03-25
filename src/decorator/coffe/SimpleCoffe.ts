@@ -1,4 +1,4 @@
-import Coffe from "./Coffe";
+import Coffe from "./Coffee";
 
 export default class SimpleCoffe implements Coffe {
   cost(): number {
