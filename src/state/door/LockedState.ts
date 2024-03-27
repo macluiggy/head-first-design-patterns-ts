@@ -12,6 +12,7 @@ export default class LockedState implements DoorState {
   }
   unlock(): void {
     console.log("The door is unlocked.");
-    this.door.changeState(new ClosedState(this.door));
+    // this.door.changeState(new ClosedState(this.door));
+    this.door.changeState(this.door.getClosedState());
   }
 }
