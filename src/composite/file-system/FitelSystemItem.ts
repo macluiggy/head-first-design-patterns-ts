@@ -1,6 +1,6 @@
 export default interface FileSystemItem {
   name: string;
-  size: number;
+  size?: number;
   print(): void;
   add(fileSystemItem: FileSystemItem): void;
   remove(fileSystemItem: FileSystemItem): void;

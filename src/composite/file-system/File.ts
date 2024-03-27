@@ -8,7 +8,7 @@ export default class File implements FileSystemItem {
     this.size = size;
   }
   print(): void {
-    throw new Error("Method not implemented.");
+    console.log(`File: ${this.name}, Size: ${this.size}KB`);
   }
   add(fileSystemItem: FileSystemItem): void {
     throw new Error("Method not implemented.");
