@@ -1,4 +1,4 @@
-import FileSystemItem from "./FitelSystemItem";
+import FileSystemItem from "./FileSystemItem";
 
 export default class File implements FileSystemItem {
   name: string;
