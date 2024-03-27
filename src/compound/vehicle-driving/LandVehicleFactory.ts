@@ -6,12 +6,12 @@ import Truck from "./Truck";
 import SafeDrivingStrategy from "./SafeDrivingStrategy";
 
 export default class LandVehicleFactory extends VehicleFactory {
-  createVehicle(type: string): Vehicle {
+  createVehicle(type: 'car' | 'truck'): Vehicle {
     return (
       {
-        car: new Car(new SafeDrivingStrategy()),
-        truck: new Truck(new SafeDrivingStrategy()),
-      }[type] || new DummyVehicle(new SafeDrivingStrategy())
+        car: new Car(new SafeDrivingStrategy(type)),
+        truck: new Truck(new SafeDrivingStrategy(type)),
+      }[type] || new DummyVehicle(new SafeDrivingStrategy(type))
     );
   }
 }
