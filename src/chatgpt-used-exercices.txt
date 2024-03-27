@@ -21,3 +21,8 @@ data processing
 
 TEMPLATE METHOD
 notification
+
+ITERATOR
+binary tree
+
+COMPOSITE
