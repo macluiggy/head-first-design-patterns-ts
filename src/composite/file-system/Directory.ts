@@ -1,3 +1,4 @@
+import File from "./File";
 import FileSystemItem from "./FileSystemItem";
 
 export default class Directory implements FileSystemItem {
