@@ -7,9 +7,14 @@ export default class Directory implements FileSystemItem {
   constructor(name: string) {
     this.name = name;
   }
-  print(): void {
+  print(indentation: number = 0): void {
+    console.log(`${' '.repeat(indentation)}Directory: ${this.getName()} (${this.getSize()} bytes)`);
     for (const child of this.children) {
-      child.print();
+        if (child instanceof Directory) {
+            (child as Directory).print(indentation + 2);
+        } else {
+            console.log(`${' '.repeat(indentation + 2)}File: ${(child as File).getName()} (${(child as File).getSize()} bytes)`);
+        }
     }
   }
   add(fileSystemItem: FileSystemItem): void {
