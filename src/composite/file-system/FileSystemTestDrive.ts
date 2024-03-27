@@ -41,6 +41,8 @@ export default class FileSystemTestDrive {
     video.add(file9);
     video.add(file10);
 
+    // home.remove(file2);
+
     root.print();
     console.log(`Total Size: ${root.getSize()}KB`);
   }
