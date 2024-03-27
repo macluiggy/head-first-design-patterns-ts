@@ -1,6 +1,6 @@
 import FileSystemItem from "./FileSystemItem";
 
-export default class File implements FileSystemItem {
+export default class Directory implements FileSystemItem {
   name: string;
   private children: FileSystemItem[] = [];
 
