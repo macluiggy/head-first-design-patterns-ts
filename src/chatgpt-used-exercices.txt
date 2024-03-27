@@ -26,3 +26,5 @@ ITERATOR
 binary tree
 
 COMPOSITE
+file system
+gui component

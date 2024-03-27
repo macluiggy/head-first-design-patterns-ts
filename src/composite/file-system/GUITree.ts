@@ -52,6 +52,10 @@ export default class GUITree {
   getName(): string {
     return this.root.getName();
   }
+
+  getSize(): number {
+    return this.root.getSize();
+  }
 }
 
 const guiTree = new GUITree();
@@ -61,3 +65,4 @@ guiTree.addFile("file2.txt", 200, "subFolder");
 guiTree.addFile("file3.txt", 150, "subFolder");
 
 guiTree.printTree();
+console.log(`Total Size: ${guiTree.getSize()} bytes`);
