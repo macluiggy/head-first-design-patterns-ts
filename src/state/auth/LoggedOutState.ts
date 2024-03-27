@@ -8,6 +8,7 @@ export default class LoggedOutState implements AuthState {
   }
   login(): void {
     console.log("logging in");
+    this.auth.setState(this.auth.getLoggedInState());
   }
   logout(): void {
     console.log("already logged out");
