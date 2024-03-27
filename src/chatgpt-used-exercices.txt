@@ -28,3 +28,6 @@ binary tree
 COMPOSITE
 file system
 gui component
+
+STATE PATTERN
+traffic light
