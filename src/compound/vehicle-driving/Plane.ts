@@ -1,6 +1,14 @@
+import DrivingStrategy from "./DrivingStrategy";
 import Vehicle from "./Vehicle";
 
 export default class Plane implements Vehicle {
+  drivingStrategy: DrivingStrategy;
+  constructor(drivingStrategy: DrivingStrategy) {
+    this.drivingStrategy = drivingStrategy;
+  }
+  setDrivingStrategy(drivingStrategy: DrivingStrategy): void {
+    this.drivingStrategy = drivingStrategy;
+  }
   drive(): void {
     console.log("Plane is flying");
   }
