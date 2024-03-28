@@ -1,5 +1,5 @@
 import Logger from "./Logger";
 
-export default interface LoggerFactory {
-  createLogger(): Logger;
+export default interface AbstractLoggerFactory {
+  createLogger(type: "file" | "console"): Logger;
 }
