@@ -5,7 +5,10 @@ import Logger from "./Logger";
 
 export default class LoggerFactory implements AbstractLoggerFactory {
   private static instance: LoggerFactory;
-  private instances: Map<string, FileLogger | ConsoleLogger> = new Map();
+  private instances: Map<string, FileLogger | ConsoleLogger> = new Map<
+    string,
+    FileLogger | ConsoleLogger
+  >();
 
   createLogger(type: "file" | "console"): Logger {
     if (type === "file") {
