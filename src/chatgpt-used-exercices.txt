@@ -32,3 +32,21 @@ gui component
 STATE PATTERN
 traffic light
 authentication
+
+Some of the most common compound patterns include:
+
+Factory Method + Singleton: Often used together when you want to ensure that only one instance of a specific factory is created and used throughout the application.
+
+Strategy + Factory: Combining these patterns allows you to dynamically select different strategies for creating objects based on certain conditions or requirements.
+
+Decorator + Factory: This combination is useful when you want to add additional functionality to objects created by a factory without modifying their structure.
+
+Adapter + Facade: Used together when you need to adapt an existing interface to work with a client interface, and then present a simplified interface to the client using the facade pattern.
+
+Observer + Command: Often combined when you want to implement a system where changes to one object trigger actions on other objects. The observer pattern is used to track changes, while the command pattern is used to encapsulate actions to be executed.
+
+Composite + Iterator: Used together when dealing with hierarchical structures where you need to traverse and manipulate collections of objects.
+
+Template Method + Strategy: Combining these patterns allows you to define a template for an algorithm (template method) while providing different implementations of specific steps (strategy) within that algorithm.
+
+These are just a few examples, and there are many other combinations depending on the specific requirements and design challenges of your application. The choice of which patterns to combine depends on the problem you're trying to solve and the flexibility and maintainability you want to achieve in your design.
