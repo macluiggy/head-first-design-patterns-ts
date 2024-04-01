@@ -1,7 +1,7 @@
 import PaymentStrategy from "./PaymentStrategy";
 
-export default class CreditCardPaymentStrategy implements PaymentStrategy {
+export default class PayPalPaymentStrategy implements PaymentStrategy {
   pay(amount: number): void {
-    console.log(`Paying ${amount} using credit card`);
+    console.log(`Paying ${amount} using PayPal`);
   }
 }
