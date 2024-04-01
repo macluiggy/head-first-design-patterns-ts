@@ -1,7 +1,7 @@
 import Coffe from "./Coffe";
 import CoffeeDecorator from "./CoffeDecorator";
 
-export default class MilkDecorator implements CoffeeDecorator {
+export default class SugarDecorator implements CoffeeDecorator {
   decoratedCoffee: Coffe;
 
   constructor(decoratedCoffee: Coffe) {
@@ -13,6 +13,6 @@ export default class MilkDecorator implements CoffeeDecorator {
   }
 
   description(): string {
-    return this.decoratedCoffee.description() + ", Milk";
+    return this.decoratedCoffee.description() + ", Sugar";
   }
 }
