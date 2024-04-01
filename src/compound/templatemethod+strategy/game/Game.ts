@@ -5,7 +5,11 @@ export default abstract class Game {
     this.end();
   }
 
-  abstract start(): void;
+  start(): void {
+    console.log("Game is starting");
+  }
   abstract makePlay(): void;
-  abstract end(): void;
+  end(): void {
+    console.log("Game is ending");
+  }
 }
