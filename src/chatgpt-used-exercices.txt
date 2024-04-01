@@ -37,6 +37,21 @@ COMPOUND PATTERN
 Factory Method + Singleton
 - loggers
 
+Strategy + Factory
+- payment methods
+
+Decorator + Factory
+- coffee types
+
+Adapter + Facade
+- media player
+
+Observer + Command
+- text editor
+
+State + Command
+- light switch
+
 Some of the most common compound patterns include:
 
 Factory Method + Singleton: Often used together when you want to ensure that only one instance of a specific factory is created and used throughout the application.
