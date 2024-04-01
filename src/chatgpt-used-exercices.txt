@@ -1,3 +1,5 @@
+The following are the excercises I already did, please, dont repeat them. I need new ones.?
+
 STRATEGY:
 PaymentStrategy
 
@@ -51,6 +53,10 @@ Observer + Command
 
 State + Command
 - light switch
+
+Composite + Iterator
+- menu
+- file system
 
 Some of the most common compound patterns include:
 
