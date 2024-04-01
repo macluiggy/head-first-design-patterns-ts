@@ -4,8 +4,8 @@ import MediaPlayer from "./MediaPlayer";
 export default class MP3PlayerAdapter implements MediaPlayer {
   private mp3Player: MP3Player;
 
-  constructor() {
-    this.mp3Player = new MP3Player();
+  constructor(mp3Player: MP3Player) {
+    this.mp3Player = mp3Player;
   }
 
   play(): void {
