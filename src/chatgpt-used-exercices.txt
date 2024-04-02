@@ -57,6 +57,7 @@ State + Command
 Composite + Iterator
 - menu
 - file system
+- organization structure
 
 Some of the most common compound patterns include:
 
