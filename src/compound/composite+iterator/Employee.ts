@@ -4,8 +4,8 @@ export default class Employee extends OrganizationUnitComponent {
   constructor(name: string) {
     super(name);
   }
-  public print(): void {
-    console.log(`Employee: ${this.name}`);
+  public print(indentation: string = ""): void {
+    console.log(`${indentation}${this.name}`);
   }
   public createIterator(): Iterator<OrganizationUnitComponent, any, undefined> {
     throw new Error("Method not implemented.");

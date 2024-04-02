@@ -13,7 +13,7 @@ export default abstract class OrganizationUnitComponent {
 //   public abstract getChildrenLength?(): number;
 //   public abstract getChildrenName?(): string;
 //   public abstract getChildrenPosition?(): string;
-  public abstract print(): void;
+  public abstract print(indentation: string): void;
   public abstract createIterator(): Iterator<OrganizationUnitComponent>;
   public abstract getName(): string;
 }
