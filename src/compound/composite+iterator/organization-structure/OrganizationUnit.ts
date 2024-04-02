@@ -23,9 +23,11 @@ export default class OrganizationUnit extends OrganizationUnitComponent {
   }
   public print(indentation: string = ""): void {
     console.log(`${indentation}${this.name}`);
-    this.children.forEach((child) => {
+    const iterator = this.createIterator();
+    while (iterator.next()) {
+      const child = iterator.next().value;
       child.print(indentation + "  ");
-    });
+    }
   }
   public createIterator(): Iterator<OrganizationUnitComponent, any, undefined> {
     return this.children.values();
