@@ -1,3 +1,4 @@
+import NullIterator from "./NullIterator";
 import OrganizationUnitComponent from "./OrganizationUnitComponent";
 
 export default class Employee extends OrganizationUnitComponent {
@@ -8,7 +9,7 @@ export default class Employee extends OrganizationUnitComponent {
     console.log(`${indentation}${this.name}`);
   }
   public createIterator(): Iterator<OrganizationUnitComponent, any, undefined> {
-    throw new Error("Method not implemented.");
+    return new NullIterator();
   }
   public getName(): string {
     return this.name;

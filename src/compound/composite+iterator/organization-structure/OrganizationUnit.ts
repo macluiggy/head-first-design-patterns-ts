@@ -24,9 +24,11 @@ export default class OrganizationUnit extends OrganizationUnitComponent {
   public print(indentation: string = ""): void {
     console.log(`${indentation}${this.name}`);
     const iterator = this.createIterator();
-    while (iterator.next()) {
-      const child = iterator.next().value;
+    let result = iterator.next();
+    while (!result.done) {
+      let child = result.value;
       child.print(indentation + "  ");
+      result = iterator.next();
     }
   }
   public createIterator(): Iterator<OrganizationUnitComponent, any, undefined> {
@@ -35,5 +37,4 @@ export default class OrganizationUnit extends OrganizationUnitComponent {
   public getName(): string {
     return this.name;
   }
-  
 }

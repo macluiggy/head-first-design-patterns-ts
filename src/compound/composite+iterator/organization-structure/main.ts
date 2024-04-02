@@ -17,3 +17,10 @@ designTeam.add(janeDoe);
 developmentTeam.add(markSmith);
 
 engineeringDepartment.print("");
+
+// const iterator = engineeringDepartment.createIterator();
+// let result = iterator.next();
+// while (!result.done) {
+//   console.log(result.value.getName());
+//   result = iterator.next();
+// }
