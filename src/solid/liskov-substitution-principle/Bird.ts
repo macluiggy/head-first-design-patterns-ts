@@ -6,7 +6,7 @@ interface FlyingBird extends Bird {
   fly(): void;
 }
 
-class Bird implements FlyingBird {
+class Birdx implements FlyingBird {
   eat(): void {
     console.log("Eating...");
   }
@@ -16,8 +16,24 @@ class Bird implements FlyingBird {
   }
 }
 
-class Penguin extends Bird {
+class Sparrow implements FlyingBird {
+  eat(): void {
+    console.log("Eating...");
+  }
+
   fly(): void {
-    throw new Error("Penguins can't fly");
+    console.log("Flying...");
   }
 }
+
+class Penguin implements Bird {
+  eat(): void {
+    console.log("Eating...");
+  }
+  // Penguin doesn't implement fly() because it can't fly
+}
+
+// const bird = new Birdx();
+const bird = new Sparrow();
+bird.eat();
+bird.fly();
