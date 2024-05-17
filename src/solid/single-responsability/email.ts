@@ -1,3 +1,9 @@
+/**
+ * Single Responsability Principle
+ * This principle states that a class should have only one reason to change, meaning that a class should have only one job.
+ * for example, if a class is responsible for sending an email, it should only send an email and not save it to the database or log it.
+ */
+
 class EmailSender {
   sender_email: string;
   sender_password: string;
@@ -27,7 +33,11 @@ class Email {
   sender: EmailSender;
   saver: EmailSaveToDatabase;
   logger: EmailLogger;
-  constructor(sender: EmailSender, saver: EmailSaveToDatabase, logger: EmailLogger) {
+  constructor(
+    sender: EmailSender,
+    saver: EmailSaveToDatabase,
+    logger: EmailLogger
+  ) {
     this.sender = sender;
     this.saver = saver;
     this.logger = logger;
